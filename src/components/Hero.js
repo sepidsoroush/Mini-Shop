@@ -14,46 +14,19 @@ const links = [
 const Hero = ()=> {
   return (
     <div className="pt-48">
-        <div className="grid grid-cols-3 grid-rows-2 gap-5 mt-5">
+        <div className="grid grid-cols-3 grid-rows-2 gap-5 mt-5 ">
             {links.map((item)=>{
                 const {id,title,image,url} = item;
                 return(
-                    <div key={id}>
+                    <div key={id} className='relative cursor-pointer overflow-hidden'>
                         <Link href={url}>
-                            <Image src={image} alt={title} />
-                            <p>{title}</p>
+                            <div className='absolute w-full h-full top-0 left-0 bg-black bg-opacity-30 hover:bg-opacity-50 transition-all duration-300 ease-in z-10'></div>
+                            <Image src={image} alt={title} className='object-cover w-full h-full' />
+                            <p className='absolute bottom-8 left-8 text-white text-5xl font-semibold'>{title}</p>
                         </Link>
                     </div>
                 )
             })}
-        {/* <div className="featured grid-one">
-            <Link to="categories/furnitures">
-            <div id="img1" className="lil-overlay"></div>
-            <img src={Main1} alt="img1" />
-            <p className="main-description">Live Comfortably</p>
-            </Link>
-        </div>
-        <div className="featured grid-two">
-            <Link to="categories/skin-care">
-            <div id="img2" className="lil-overlay"></div>
-            <img src={Main2} alt="img2" />
-            <p className="main-description">Skincare</p>
-            </Link>
-        </div>
-        <div className="featured grid-four">
-            <Link to="categories/kitchen">
-            <div id="img3" className="lil-overlay"></div>
-            <img src={Main3} alt="img3" />
-            <p className="main-description">Kitchen</p>
-            </Link>
-        </div>
-        <div className="featured grid-four-low">
-            <Link to="categories/electronics">
-            <div id="img4" className="lil-overlay"></div>
-            <img src={Main4} alt="img4" />
-            <p className="main-description">Electronics</p>
-            </Link>
-        </div> */}
         </div>
     </div>
   );
