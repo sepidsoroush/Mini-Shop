@@ -13,24 +13,20 @@ const StarProducts = () =>{
     <div className={`${styles.mainContainer} ${inter.className}`}>
       <h2 className={styles.title}>Products we are proud of</h2>
       <div className={styles.container}>
-        <div className={styles.grid}>
+        <div className={styles.flexbox}>
             {filteredItems.map((item) => {
               const {id , img,description , price} = item;
               return(
-                <div key={id} className={styles.product}>
-                <Link
-                  onClick={() => window.top(0, 0)}
-                  href='/'
-                >
-                  <div className={styles.header}>
-                    <Image src={img} alt={description} className={styles.image}/>
-                  </div>
-                  <div >
+                  <Link
+                    key={id}
+                    className={styles.product}
+                    onClick={() => window.top(0, 0)}
+                    href='/'
+                  >
+                    <Image src={img} alt={description} className={styles.image} priority />
                     <p className={styles.details}>{description}</p>
                     <p className={styles.price}>{price}$</p>
-                  </div>
-                </Link>
-              </div>
+                  </Link>
               )
             })}
           </div>
