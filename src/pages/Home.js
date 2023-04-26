@@ -1,9 +1,11 @@
 import Hero from "@/components/Hero";
+import StarProducts from "@/components/StarProducts";
 
 const HomePage = ()=> {
     return (
       <div>
-      <Hero />
+        <Hero />
+        <StarProducts />
       </div>
     );
   }
