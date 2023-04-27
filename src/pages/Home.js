@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import StarProducts from "@/components/StarProducts";
@@ -25,6 +26,7 @@ const HomePage = ()=> {
             img={Banner2}
          />
          <Newsletter />
+         <Footer />
       </div>
     );
   }
