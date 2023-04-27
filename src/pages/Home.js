@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
+import Newsletter from "@/components/Newsletter";
 import StarProducts from "@/components/StarProducts";
 import Trending from "@/components/Trending";
 import Banner1 from '../img/banner/banner1.jpg'
@@ -23,6 +24,7 @@ const HomePage = ()=> {
             text=" RAOUF Products are all made to standard sizes so that you can mix and match them freely."
             img={Banner2}
          />
+         <Newsletter />
       </div>
     );
   }
