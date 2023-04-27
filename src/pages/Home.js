@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Categories from "@/components/Categories";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
@@ -10,6 +11,7 @@ import Banner2 from '../img/banner/banner2.jpg'
 const HomePage = ()=> {
     return (
       <div>
+        <Categories />
         <Hero />
         <StarProducts />
         <Banner

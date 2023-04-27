@@ -1,0 +1,59 @@
+.header {
+    padding-top: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -64px;
+}
+
+.header a {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+.filters {
+    justify-content: center;
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 96px;
+}
+
+.title h3 {
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.back span{
+    font-size: 20px;
+    
+}
