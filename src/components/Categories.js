@@ -40,7 +40,7 @@ const Categories = () => {
                             <Link 
                                 key={id} 
                                 href={url}
-                                onClick={() => handleBtnName({title})}
+                                onClick={() => handleBtnName(title)}
                                 
                             >
                                 <button className={styles.btn}>{title}</button>
