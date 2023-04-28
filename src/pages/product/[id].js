@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import { useState , useContext, useEffect } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from '@/styles/Product.module.css'
+import { FaAngleLeft } from "react-icons/fa";
+
 
 const Product =()=> {
     const router = useRouter()
@@ -51,94 +54,104 @@ const Product =()=> {
         >
         <p>Item has been added to the cart &nbsp; ✅</p>
         </div> */}
-        <Link href={'/categories/all'}>
-            Back to Categories
-        </Link>
+        
 
-        <div className="product-page-div">
-        <div className="container">
-            <div className="product-div">
-            <h3 className="product-big-name">{item.description}</h3>
-            <div className="product-left">
-                <div className="big-img">
-                {image && <Image src={image} alt="product"
-                width={500}
-                height={500}
-                priority
-                 />}
-                </div>
-                <div className="small-imgs">
-                {item.img && <Image
-                    onMouseOver={changeImage}
-                    width={500}
-                    height={500}
-                    src={item.img}
-                    alt="product"
+        <div className={styles.main}>
+        <div className={styles.container}>
+            <div className={styles.product}>
+                <h3 className={styles.title}>{item.description}</h3>
+                <div className={styles.left}>
+                    <div className={styles.bigImg}>
+                    {image && <Image src={image} alt="product"
+                    width={435}
+                    height={435}
                     priority
-                />}
-                {item.otherImgs && item.otherImgs[0] &&
-                    <Image
-                    onMouseOver={changeImage}
-                    width={500}
-                    height={500}
-                    src={item.otherImgs[0]}
-                    alt="product"
-                    priority
-                    />
-                }
-                {item.otherImgs && item.otherImgs[1] &&
-                    <Image
-                    onMouseOver={changeImage}
-                    width={500}
-                    height={500}
-                    src={item.otherImgs[1]}
-                    alt="product"
-                    priority
-                    />
-                }
+                    />}
+                    </div>
+                    <div className={styles.small}>
+                    <div className={styles.img}>
+                        {item.img && <Image
+                            onMouseOver={changeImage}
+                            width={435}
+                            height={435}
+                            src={item.img}
+                            alt="product"
+                            priority
+                        />}
+                    </div>
+                    <div className={styles.img}>
+                        {item.otherImgs && item.otherImgs[0] &&
+                            <Image
+                            onMouseOver={changeImage}
+                            width={435}
+                            height={435}
+                            src={item.otherImgs[0]}
+                            alt="product"
+                            priority
+                            />
+                        }
+                    </div>                    
+                    <div className={styles.img}>
+                        {item.otherImgs && item.otherImgs[1] &&
+                            <Image
+                            onMouseOver={changeImage}
+                            width={500}
+                            height={500}
+                            src={item.otherImgs[1]}
+                            alt="product"
+                            priority
+                            />
+                        }
+                    </div>                    
+                    </div>
                 </div>
-            </div>
-            <div className="product-right">
-                <p className="product-spec">{item.specs}</p>
-                <div className="product-quant">
-                <p>Quantity</p>
-                <div className="product-btns">
-                    <button onClick={decrease}>-</button>
-                    <p className="quantity">{quantity}</p>
-                    <button onClick={increase}>+</button>
+                <div className={styles.right}>
+                    <p className={styles.story}>{item.specs}</p>
+                    <div className={styles.quant}>
+                        <p>Quantity</p>
+                        <div className={styles.btns}>
+                            <button onClick={decrease}>-</button>
+                            <p className={styles.quantity}>{quantity}</p>
+                            <button onClick={increase}>+</button>
+                        </div>
+                        <p className={styles.price}>{calcPrice(quantity)}.00$</p>
+                    </div>
+                    <div className={styles.addCart}>
+                        <button
+                            onClick={() => {
+                            // addToCart(item);
+                            showNotify();
+                            }}
+                            className={styles.addBtn}
+                        >
+                            add to cart
+                        </button>
+                    <button className={styles.buyBtn}>buy now</button>
+                    </div>
                 </div>
-                <p className="product-price">{calcPrice(quantity)}.00$</p>
-                </div>
-                <div className="atc-buy">
-                <button
-                    onClick={() => {
-                    // addToCart(item);
-                    showNotify();
-                    }}
-                    className="atc-btn"
-                >
-                    add to cart
-                </button>
-                <button className="buy-btn">buy now</button>
-                </div>
-            </div>
             </div>
 
-            <div className="specifications">
-            <div className="spec">
-                <p className="spec-title">Texture:</p>
-                <p className="title-desc">{item.texture}</p>
+            <div className={styles.specifications}>
+            <div className={styles.spec}>
+                <p className={styles.specTitle}>Texture:</p>
+                <p className={styles.desc}>{item.texture}</p>
             </div>
-            <div className="spec">
-                <p className="spec-title">Weight:</p>
-                <p className="title-desc">{item.weight}</p>
+            <div className={styles.spec}>
+                <p className={styles.specTitle}>Weight:</p>
+                <p className={styles.desc}>{item.weight}</p>
             </div>
-            <div className="spec">
-                <p className="spec-title">Size:</p>
-                <p className="title-desc">{item.size}</p>
+            <div className={styles.spec}>
+                <p className={styles.specTitle}>Size:</p>
+                <p className={styles.desc}>{item.size}</p>
             </div>
             </div>
         </div>
+        <Link 
+            href="/" 
+            className={styles.back}
+            onClick={() => window.scrollTo(0, 0)} >
+            <FaAngleLeft /><span>Back</span>
+        </Link>
         </div>
     </>
     );
