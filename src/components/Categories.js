@@ -9,12 +9,12 @@ const inter = Inter({ subsets: ['latin'] })
 const Categories = () => {
     const links = [
         {id:1,title:'All',url:'/categories/all'},
-        {id:1,title:'Furnitures',url:'/categories/furnitures'},
-        {id:1,title:'Electronics',url:'/categories/electronics'},
-        {id:1,title:'Lamps',url:'/categories/lamps'},
-        {id:1,title:'Kitchen',url:'/categories/kitchen'},
-        {id:1,title:'Chairs',url:'/categories/chairs'},
-        {id:1,title:'Skin Care',url:'/categories/skincare'},
+        {id:2,title:'Furnitures',url:'/categories/furniture'},
+        {id:3,title:'Electronics',url:'/categories/electronic'},
+        {id:4,title:'Lamps',url:'/categories/lamp'},
+        {id:5,title:'Kitchen',url:'/categories/kitchen'},
+        {id:6,title:'Chairs',url:'/categories/chair'},
+        {id:7,title:'Skin Care',url:'/categories/skincare'},
     ]
     const [btnName, setBtnName] = useState("All");
     const handleBtnName = (e) => {

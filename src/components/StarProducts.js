@@ -1,4 +1,3 @@
-// import styles from '@/styles/Hero.module.css'
 import { items } from "./AllData";
 import Link from 'next/link'
 import Image from 'next/image'

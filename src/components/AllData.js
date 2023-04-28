@@ -137,7 +137,7 @@ export const items = [
   },
   {
     id: 6,
-    category: "skin-care",
+    category: "skincare",
     img: Img6,
     description: "Body Oil 200ml",
     price: 67,
@@ -242,7 +242,7 @@ export const items = [
   },
   {
     id: 13,
-    category: "skin-care",
+    category: "skincare",
     img: Img13,
     description: "Unbleached Cotton Pads 180",
     price: 33,
@@ -347,7 +347,7 @@ export const items = [
   },
   {
     id: 20,
-    category: "skin-care",
+    category: "skincare",
     img: Img20,
     description: "Body Oil 50ml",
     price: 45,

@@ -17,9 +17,11 @@
 .flexbox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    gap : 24px;
+    padding-top: 20px;
 }
 .product {
     outline: 2px solid rgba(0, 0, 0, .205);
@@ -28,7 +30,6 @@
     cursor: pointer;
     width: 270px;
     height: 400px;
-    margin: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
