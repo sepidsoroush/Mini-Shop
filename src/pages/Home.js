@@ -1,17 +1,19 @@
 import Banner from "@/components/Banner";
-import Categories from "@/components/Categories";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import StarProducts from "@/components/StarProducts";
 import Trending from "@/components/Trending";
+import Link from "next/link";
 import Banner1 from '../img/banner/banner1.jpg'
 import Banner2 from '../img/banner/banner2.jpg'
 
 const HomePage = ()=> {
     return (
       <div>
-        <Categories />
+        <div>
+          <Link href={'/categories/all'}>Catefories</Link>
+        </div>
         <Hero />
         <StarProducts />
         <Banner

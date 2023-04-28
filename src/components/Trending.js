@@ -38,7 +38,7 @@ const filteredItems = items.filter((item) => item.trend);
             <div key={item.id} className={styles.item}>
             <Link
                 onClick={() => window.top(0, 0)}
-                href={`/categories/product/${item.id}`}
+                href={`/product/${item.id}`}
             >
                 <div className={styles.header}>
                 <Image src={item.img} alt="product" priority />

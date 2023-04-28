@@ -24,8 +24,8 @@ const Post = () => {
                   <Link
                     key={id}
                     className={styles.product}
-                    onClick={() => window.top(0, 0)}
-                    href='/'
+                    // onClick={() => window.top(0, 0)}
+                    href={`/product/${id}`}
                   >
                     <Image src={img} alt={description} className={styles.image} priority />
                     <p className={styles.details}>{description}</p>
