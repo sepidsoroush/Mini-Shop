@@ -1,18 +1,18 @@
 import { items } from "../../components/AllData";
 import { useRouter } from 'next/router'
-import { useState , useContext, useEffect } from "react";
+import {createContext, useState , useContext, useEffect } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Product.module.css'
 import { FaAngleLeft } from "react-icons/fa";
 
-
+export const CartContext = createContext();
 const Product =()=> {
     const router = useRouter()
     const [item, setItem] = useState({});
     const [quantity, setQuantity] = useState(1);
     const [image, setImage] = useState(item.img);
-    // const { addToCart } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
     const [notify, setNotify] = useState(false);
 
     const changeImage = (e) => {
@@ -48,14 +48,12 @@ const Product =()=> {
 
     return (
     <>
-        {/* <div
-        onAnimationEnd={() => setNotify(false)}
-        className={`notify ${notify ? "slide-in" : ""}`}
+        <div
+            onAnimationEnd={() => setNotify(false)}
+            className={`${styles.notify} ${notify ? styles.slidein : ""}`}
         >
-        <p>Item has been added to the cart &nbsp; ✅</p>
-        </div> */}
-        
-
+            <p>Item has been added to the cart &nbsp; ✅</p>
+        </div>        
         <div className={styles.main}>
         <div className={styles.container}>
             <div className={styles.product}>
@@ -119,7 +117,7 @@ const Product =()=> {
                     <div className={styles.addCart}>
                         <button
                             onClick={() => {
-                            // addToCart(item);
+                            addToCart(item);
                             showNotify();
                             }}
                             className={styles.addBtn}
