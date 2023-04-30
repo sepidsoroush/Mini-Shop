@@ -1,7 +1,11 @@
 .main {
     padding-bottom: 10rem;
 }
-
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 19px;
+}
 .banner {
     display: flex;
     justify-content: space-between;
