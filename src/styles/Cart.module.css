@@ -19,3 +19,54 @@
     margin-top: 3rem;
     cursor: pointer;
 }
+
+
+.main {
+    overflow-y: scroll;
+    padding: 5px;
+    height: 70%;
+    margin-top: 2rem;
+    margin-right: -.5rem;
+}
+.fullCart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/* subtotal */
+
+.subtotal {
+    display: flex;
+    width: 100%;
+    height: 12rem;
+    border-top: 2px dashed black;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.left {
+    padding-top: 4rem;
+}
+.left a {
+    font-size: 2rem;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 1rem 3.5rem;
+    transition: all 0.2s;
+}
+.left a:hover {
+    background-color: #000000;
+    color: white;
+}
