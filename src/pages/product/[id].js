@@ -7,7 +7,7 @@ import styles from '@/styles/Product.module.css'
 import { FaAngleLeft } from "react-icons/fa";
 
 export const CartContext = createContext();
-const Product =()=> {
+export const Product =()=> {
     const router = useRouter()
     const [item, setItem] = useState({});
     const [quantity, setQuantity] = useState(1);
@@ -154,5 +154,3 @@ const Product =()=> {
     </>
     );
 }
-
-export default Product;
