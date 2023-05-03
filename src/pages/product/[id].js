@@ -5,30 +5,23 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Product.module.css'
 import { FaAngleLeft } from "react-icons/fa";
+import { AppContext } from '@/context/AppContext'
 
 export const CartContext = createContext();
 export const Product =()=> {
+    const {
+        qty,
+        incQty,
+        decQty,
+        onAdd,
+      } = useContext(AppContext);
     const router = useRouter()
     const [item, setItem] = useState({});
-    const [quantity, setQuantity] = useState(1);
     const [image, setImage] = useState(item.img);
-    const { addToCart } = useContext(CartContext);
     const [notify, setNotify] = useState(false);
 
     const changeImage = (e) => {
         setImage(e.target.src);
-    };
-
-    const increase = () => {
-        if (quantity >= 1) {
-            setQuantity(quantity + 1);
-        }
-    };
-
-    const decrease = () => {
-        if (quantity > 1) {
-            setQuantity(quantity - 1);
-        }
     };
 
     const calcPrice = (quantity) => {
@@ -108,16 +101,16 @@ export const Product =()=> {
                     <div className={styles.quant}>
                         <p>Quantity</p>
                         <div className={styles.btns}>
-                            <button onClick={decrease}>-</button>
-                            <p className={styles.quantity}>{quantity}</p>
-                            <button onClick={increase}>+</button>
+                            <button onClick={decQty}>-</button>
+                            <p className={styles.quantity}>{qty}</p>
+                            <button onClick={incQty}>+</button>
                         </div>
-                        <p className={styles.price}>{calcPrice(quantity)}.00$</p>
+                        <p className={styles.price}>{calcPrice(qty)}.00$</p>
                     </div>
                     <div className={styles.addCart}>
                         <button
                             onClick={() => {
-                            addToCart(item);
+                            onAdd(item , qty);
                             showNotify();
                             }}
                             className={styles.addBtn}

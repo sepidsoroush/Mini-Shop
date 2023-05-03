@@ -2,19 +2,18 @@ import styles from '@/styles/Navbar.module.css'
 import LogoImg2 from "../img/newlogo2.png";
 import Link from 'next/link'
 import Image from 'next/image'
-import { useContext, useState } from "react";
+import { useState , useContext} from "react";
 import FullCart from "./FullCart";
 import EmptyCart from "./EmptyCart";
-import { CartContext } from "../pages/product/[id]";
+import { AppContext } from '@/context/AppContext'
 import { FaShoppingCart , FaTimes } from "react-icons/fa";
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-function Navbar() {
+const Navbar =()=> {
   const [sticky, setSticky] = useState(false);
-  const [cart, setCart] = useState(false);
-  const { cartItem } = useContext(CartContext);
+  const { cartItems , toggleCart , showCart , totalQuantities} = useContext(AppContext);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -24,11 +23,7 @@ function Navbar() {
     }
   };
 
-  const openCart = () => {
-    setCart(!cart);
-  };
-
-  window.addEventListener("scroll", handleScroll);
+  // window.addEventListener("scroll", handleScroll);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -41,27 +36,28 @@ function Navbar() {
     <div className={inter.className}>
       {/* overlay */}
       <div
-        onClick={openCart}
-        className={`${styles.overlay} ${ cart ? styles.openflex : styles.closedflex}`}
+        onClick={()=>{toggleCart()}}
+        className={`${styles.overlay} ${ showCart ? styles.openflex : styles.closedflex}`}
       ></div>
 
       {/* cart */}
-      <div className={`${styles.cart} ${cart ? styles.opencart : styles.closedcart}`}>
+      {showCart &&
+      <div className={`${styles.cart} ${cartItems ? styles.opencart : styles.closedcart}`}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Your Shopping Cart ({cartItem.length})
+            Your Shopping Cart ({cartItems.length})
           </h2>
-          <FaTimes onClick={openCart} className={styles.icon}></FaTimes>
+          <FaTimes onClick={()=>{toggleCart()}} className={styles.icon}></FaTimes>
         </div>
 
         <div className={styles.body}>
-          {cartItem.length < 1 ? (
-            <EmptyCart openCart={openCart} />
+          {cartItems.length < 1 ? (
+            <EmptyCart onClick={()=>{toggleCart()}} />
           ) : (
             <FullCart />
           )}
         </div>
-      </div>
+      </div>}
 
       {/* Navbar */}
       <nav className={styles.navbar}>
@@ -85,8 +81,11 @@ function Navbar() {
               >
                 product page
               </Link>
-              <div onClick={openCart}>
+              <div onClick={()=>{toggleCart()}}>
                 <FaShoppingCart />
+                {totalQuantities > 0 && (
+                  <span className={styles.number}>{totalQuantities}</span>
+                )}
               </div>
             </div>
           </div>

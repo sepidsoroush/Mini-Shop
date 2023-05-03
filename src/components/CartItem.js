@@ -1,40 +1,39 @@
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../pages/product/[id]";
+import { AppContext } from '@/context/AppContext'
 import styles from '@/styles/CartItem.module.css'
 import { FaTimes } from "react-icons/fa";
 
 const CartItem = ()=> {
   const [quantity, setQuantity] = useState(1);
-  const { cartItem, setCartItem } = useContext(CartContext);
-
-  const increase = () => {
-    if (quantity >= 1) {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const decrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  const {
+    qty,
+    incQty,
+    decQty,
+    onAdd,
+    toggleCart,
+    cartItems,
+    setCartItems,
+    totalPrice,
+    updateCartItemQty,
+    handleCartItemRemove,
+  } = useContext(AppContext);
 
   const calcPrice = (quantity, price) => {
     return quantity * price;
   };
 
-  const [deleteItem, setDeleteItem] = useState(cartItem);
+  const [deleteItem, setDeleteItem] = useState(cartItems);
 
   const removeFromCart = (id) => {
-    const updateCart = cartItem.filter((item) => item.id !== id);
+    const updateCart = cartItems.filter((item) => item.id !== id);
     setDeleteItem(updateCart);
     const json = JSON.stringify(cartItem.id);
     localStorage.removeItem("cartItem", json);
   };
 
   useEffect(() => {
-    setCartItem(deleteItem);
-  }, [deleteItem, setCartItem]);
+    setCartItems(deleteItem);
+  }, [deleteItem, setCartItems]);
 
   return (
     <>
@@ -46,9 +45,9 @@ const CartItem = ()=> {
           <div className={styles.middle}>
             <p className={styles.name}>{item.description}</p>
             <div className={styles.btns}>
-              <button onClick={decrease}>-</button>
-              <p className={styles.quantity}>{quantity}</p>
-              <button onClick={increase}>+</button>
+              <button onClick={decQty}>-</button>
+              <p className={styles.quantity}>{qty}</p>
+              <button onClick={incQty}>+</button>
             </div>
           </div>
           <div className={styles.right}>
