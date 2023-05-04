@@ -52,7 +52,7 @@ const Navbar =()=> {
 
         <div className={styles.body}>
           {cartItems.length < 1 ? (
-            <EmptyCart onClick={()=>{toggleCart()}} />
+            <EmptyCart openCart={toggleCart} />
           ) : (
             <FullCart />
           )}

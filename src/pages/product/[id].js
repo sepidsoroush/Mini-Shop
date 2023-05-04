@@ -1,14 +1,13 @@
 import { items } from "../../components/AllData";
 import { useRouter } from 'next/router'
-import {createContext, useState , useContext, useEffect } from "react";
+import { useState , useContext, useEffect } from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Product.module.css'
 import { FaAngleLeft } from "react-icons/fa";
 import { AppContext } from '@/context/AppContext'
 
-export const CartContext = createContext();
-export const Product =()=> {
+const Product =()=> {
     const {
         qty,
         incQty,
@@ -147,3 +146,4 @@ export const Product =()=> {
     </>
     );
 }
+export default Product;
