@@ -31,7 +31,7 @@ const Hero = ()=> {
                             : styles.four}`}>
                                 <Link href={url}>
                                     <div className={styles.overlay}></div>
-                                    <Image src={image} alt={title} className={styles.image} />
+                                    <Image src={image} alt={title} className={styles.image} priority />
                                     <p className={styles.description}>{title}</p>
                                 </Link>
                             </div>

@@ -77,7 +77,7 @@ const Navbar =()=> {
               </Link>
               <Link
                 onClick={() => window.scrollTo(0, 0)}
-                href="/pages/product/19"
+                href="/product/19"
               >
                 product page
               </Link>
