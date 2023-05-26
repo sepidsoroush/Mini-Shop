@@ -22,5 +22,9 @@
   scroll-behavior: smooth;
 }
 html {
-  font-size: 10px;;
+  font-size: 10px;
+}
+
+ul {
+  list-style-type: none;
 }
