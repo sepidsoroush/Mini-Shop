@@ -9,13 +9,22 @@ import Banner1 from "../img/banner/banner1.jpg";
 import Banner2 from "../img/banner/banner2.jpg";
 import { useState } from "react";
 import CartProvider from "@/context/CartProvider";
+import Cart from "@/components/Cart/Cart";
 
 const HomePage = () => {
   const [showCart, setShowCart] = useState(false);
 
+  const openCartHandler = () => {
+    setShowCart(true);
+  };
+  const closeCartHandler = () => {
+    setShowCart(false);
+  };
+
   return (
     <CartProvider>
-      <Navbar />
+      {showCart && <Cart onCloseCart={closeCartHandler} show={showCart} />}
+      <Navbar onOpenCart={openCartHandler} />
       <Hero />
       <StarProducts />
       <Banner

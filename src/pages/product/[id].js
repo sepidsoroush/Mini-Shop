@@ -1,14 +1,14 @@
-import { items } from "../../components/AllData";
+import { items as allData } from "../../components/AllData";
 import { useRouter } from "next/router";
 import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/Product.module.css";
 import { FaAngleLeft } from "react-icons/fa";
-import { AppContext } from "@/context/cart-context";
+import CartContext from "@/context/cart-context";
 
 const Product = () => {
-  const { qty, incQty, decQty, onAdd } = useContext(AppContext);
+  const { items, addItem, removeItem } = useContext(CartContext);
   const router = useRouter();
   const [item, setItem] = useState({});
   const [image, setImage] = useState(item.img);
@@ -28,7 +28,7 @@ const Product = () => {
 
   useEffect(() => {
     if (router.query.id) {
-      const filteredItem = items.filter(
+      const filteredItem = allData.filter(
         (item) => item.id === parseInt(router.query.id)
       );
       setItem(filteredItem[0]);
@@ -103,16 +103,16 @@ const Product = () => {
               <div className={styles.quant}>
                 <p>Quantity</p>
                 <div className={styles.btns}>
-                  <button onClick={decQty}>-</button>
-                  <p className={styles.quantity}>{qty}</p>
-                  <button onClick={incQty}>+</button>
+                  <button onClick={removeItem}>-</button>
+                  <p className={styles.quantity}>{items.amount}</p>
+                  <button onClick={addItem}>+</button>
                 </div>
-                <p className={styles.price}>{calcPrice(qty)}.00$</p>
+                <p className={styles.price}>{calcPrice(items.amount)}.00$</p>
               </div>
               <div className={styles.addCart}>
                 <button
                   onClick={() => {
-                    onAdd(item, qty);
+                    addItem(item, items.amount);
                     showNotify();
                   }}
                   className={styles.addBtn}

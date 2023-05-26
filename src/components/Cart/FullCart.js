@@ -1,23 +1,22 @@
 import Link from "next/link";
 import { useContext } from "react";
-import { AppContext } from "@/context/cart-context";
+import CartContext from "@/context/cart-context";
 import EmptyCart from "./EmptyCart";
 import CartItem from "./CartItem";
 import styles from "@/styles/Cart.module.css";
 
-const FullCart = () => {
-  const { toggleCart, cartItems, setCartItems, totalPrice } =
-    useContext(AppContext);
+const FullCart = (props) => {
+  const { items, totalAmount } = useContext(CartContext);
 
   return (
     <>
       <div className={styles.main}>
         <div className={styles.fullCart}>
-          {cartItems.map((item, id) =>
-            cartItems.length !== 0 ? (
-              <CartItem key={id} item={item} setCartItem={setCartItems} />
+          {items.map((item, id) =>
+            items.length !== 0 ? (
+              <CartItem key={id} item={item} />
             ) : (
-              <EmptyCart key={id} openCart={toggleCart} />
+              <EmptyCart key={id} onClose={props.onClose} />
             )
           )}
         </div>
@@ -25,7 +24,7 @@ const FullCart = () => {
       <div className={styles.subtotal}>
         <div className={styles.right}>
           <p>Subtotal</p>
-          <p>{totalPrice + ".00$"}</p>
+          <p>{totalAmount + ".00$"}</p>
         </div>
         <div className={styles.left}>
           <Link href="#">Go to Checkout</Link>
