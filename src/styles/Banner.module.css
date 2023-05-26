@@ -1,89 +1,84 @@
 .main {
-    padding-bottom: 10rem;
-}
-.container{
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 19px;
+  padding-bottom: 10rem;
 }
 .banner {
-    display: flex;
-    justify-content: space-between;
-    height: 40rem;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  height: 40rem;
+  overflow: hidden;
 }
 
 .reverse {
-    display: flex;
-    justify-content: space-between;
-    height: 40rem;
-    overflow: hidden;
-    flex-direction: row-reverse;
+  display: flex;
+  justify-content: space-between;
+  height: 40rem;
+  overflow: hidden;
+  flex-direction: row-reverse;
 }
 
 .sidetext {
-    width: 50%;
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 11rem;
-    background-color: #E9E9E9;
+  width: 50%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 11rem;
+  background-color: #e9e9e9;
 }
 
 .sidetext h2 {
-    font-size: 3.2rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .sidetext p {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
-.image{
-    width: 50%;
-    text-align: end;
-    background-color: #E9E9E9;
+.image {
+  width: 50%;
+  text-align: end;
+  background-color: #e9e9e9;
 }
 
 .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .text button {
-    background-color: black;
-    color: white;
-    font-size: 1.7rem;
-    font-weight: bold;
-    padding: 1rem;
-    text-transform: uppercase;
-    margin-top: 2rem;
-    cursor: pointer;
-    border: 2px solid black;
-    transition: all 0.15s;
+  background-color: black;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: all 0.15s;
 }
 
 .text button:hover {
-    background-color: transparent;
-    color: black;
+  background-color: transparent;
+  color: black;
 }
 
-@media (max-width:750px) {
-    .sidetext {
-        padding: 0 4rem;
-    }
+@media (max-width: 750px) {
+  .sidetext {
+    padding: 0 4rem;
+  }
 }
 
-@media (max-width:600px) {
-    .sidetext {
-        width: 100%;
-    }
+@media (max-width: 600px) {
+  .sidetext {
+    width: 100%;
+  }
 
-    .image{
-        display: none;
-    }
+  .image {
+    display: none;
+  }
 }

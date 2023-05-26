@@ -28,3 +28,8 @@ html {
 ul {
   list-style-type: none;
 }
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 19px;
+}

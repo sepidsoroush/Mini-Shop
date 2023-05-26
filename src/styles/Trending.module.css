@@ -1,11 +1,6 @@
 .trending {
   padding-bottom: 10rem;
 }
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 19px;
-}
 .trending h3 {
   font-size: 2.6rem;
   font-weight: 600;

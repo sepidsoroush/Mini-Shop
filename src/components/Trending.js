@@ -20,7 +20,7 @@ const Trending = () => {
 
   return (
     <div className={`${styles.trending} ${inter.className}`}>
-      <div className={styles.container}>
+      <main>
         <div className={styles.scrollbar}>
           <h3>Trending Now</h3>
           <div className={styles.btns}>
@@ -39,7 +39,7 @@ const Trending = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </main>
     </div>
   );
 };

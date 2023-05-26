@@ -10,7 +10,7 @@ const StarProducts = () => {
   return (
     <div className={`${styles.mainContainer} ${inter.className}`}>
       <h2 className={styles.title}>Products we are proud of</h2>
-      <div className={styles.container}>
+      <main>
         <ul className={styles.flexbox}>
           {filteredItems.map((item) => (
             <li key={item.id}>
@@ -18,7 +18,7 @@ const StarProducts = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </main>
     </div>
   );
 };
