@@ -2,25 +2,19 @@ import { items as allData } from "../../components/AllData";
 import ProductForm from "@/components/Products/ProductForm";
 import { useRouter } from "next/router";
 import { useState, useContext, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import styles from "@/styles/ProductPage.module.css";
 import { FaAngleLeft } from "react-icons/fa";
 import CartContext from "@/context/cart-context";
 import { Inter } from "next/font/google";
+import ProductImgAlbum from "@/components/Products/ProductImgAlbum";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const ProductPage = () => {
-  const { items, addItem } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
   const router = useRouter();
   const [item, setItem] = useState({});
-  const [image, setImage] = useState(item.img);
   // const [notify, setNotify] = useState(false);
-
-  const changeImage = (e) => {
-    setImage(e.target.src);
-  };
 
   const amountHandler = (enteredAmount) => {
     addItem({
@@ -55,57 +49,7 @@ const ProductPage = () => {
       <div className={`${styles.main} ${inter.className}`}>
         <div className={styles.product}>
           <h3 className={styles.title}>{item.description}</h3>
-          <div className={styles.left}>
-            <div className={styles.bigImg}>
-              {image && (
-                <Image
-                  src={image}
-                  alt="product"
-                  width={435}
-                  height={435}
-                  priority
-                />
-              )}
-            </div>
-            <div className={styles.small}>
-              <div className={styles.img}>
-                {item.img && (
-                  <Image
-                    onMouseOver={changeImage}
-                    width={435}
-                    height={435}
-                    src={item.img}
-                    alt="product"
-                    priority
-                  />
-                )}
-              </div>
-              <div className={styles.img}>
-                {item.otherImgs && item.otherImgs[0] && (
-                  <Image
-                    onMouseOver={changeImage}
-                    width={435}
-                    height={435}
-                    src={item.otherImgs[0]}
-                    alt="product"
-                    priority
-                  />
-                )}
-              </div>
-              <div className={styles.img}>
-                {item.otherImgs && item.otherImgs[1] && (
-                  <Image
-                    onMouseOver={changeImage}
-                    width={500}
-                    height={500}
-                    src={item.otherImgs[1]}
-                    alt="product"
-                    priority
-                  />
-                )}
-              </div>
-            </div>
-          </div>
+          <ProductImgAlbum mainImg={item.img} otherImgs={item.otherImgs} />
           <ProductForm onAddToCart={amountHandler} {...item} />
         </div>
 
