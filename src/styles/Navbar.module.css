@@ -10,21 +10,17 @@
   width: 100%;
   z-index: 100;
 }
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 19px;
-}
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 12rem;
   transition: height 0.1s linear;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 19px;
 }
-.navContainer.sticky {
-  height: 8rem !important;
-}
+
 .logo {
   width: 8.5rem;
   height: auto;
@@ -34,6 +30,7 @@
   font-size: 1.8rem;
   text-transform: uppercase;
   display: flex;
+  align-items: center;
   gap: 2.5rem;
 }
 .links a {
