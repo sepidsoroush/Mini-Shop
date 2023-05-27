@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Newsletter from "./Newsletter";
+import Cart from "../Cart/Cart";
 
 import { useState } from "react";
 

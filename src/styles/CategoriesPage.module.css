@@ -1,0 +1,22 @@
+.mainContainer {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+}
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+.flexbox a {
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 700px) {
+  .flexbox {
+    justify-content: center;
+  }
+}
