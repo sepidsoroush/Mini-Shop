@@ -1,0 +1,146 @@
+.form {
+  width: 50%;
+  height: 100%;
+  background-color: #e5e5e5;
+  padding: 16rem 5rem 8rem 5rem;
+}
+
+.story {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  line-height: 1.5;
+}
+
+.quant {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  border: 1px solid black;
+}
+
+.btns button {
+  font-size: 3rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btns button:first-child {
+  border-form: 1px solid black;
+}
+
+.btns button:last-child {
+  border-left: 1px solid black;
+}
+
+.btns button:hover {
+  background-color: transparent;
+}
+
+.btns p {
+  outline-offset: -2px;
+  width: 6rem;
+  height: 5rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.addCart {
+  display: flex;
+  gap: 2rem;
+}
+
+.addCart button {
+  width: 50%;
+  height: 5.5rem;
+  border: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addBtn {
+  background-color: transparent;
+  border: 2px solid black !important;
+}
+
+.addBtn:hover {
+  color: white;
+  background-color: black;
+}
+
+.buyBtn {
+  background-color: #b6002c;
+  color: white;
+  border: 2px solid #b6002c !important;
+}
+
+.buyBtn:hover {
+  background-color: transparent;
+  color: #b6002c;
+}
+
+@keyframes slidein {
+  0% {
+    top: -100%;
+  }
+
+  40% {
+    top: 90px;
+  }
+
+  60% {
+    top: 90px;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    padding: 16rem 2rem 8rem 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .form {
+    width: 100%;
+    padding: 3rem 2rem 4rem 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .quant {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .specs {
+    margin-bottom: 2rem;
+  }
+
+  .addCart {
+    gap: 2rem;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .addCart button {
+    width: 100%;
+  }
+}
