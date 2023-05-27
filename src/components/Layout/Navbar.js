@@ -1,5 +1,5 @@
 import styles from "@/styles/Navbar.module.css";
-import LogoImg2 from "../img/newlogo2.png";
+import LogoImg2 from "../../img/newlogo2.png";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useContext } from "react";
