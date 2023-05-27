@@ -8,6 +8,7 @@ import CartContext from "@/context/cart-context";
 import { Inter } from "next/font/google";
 import ProductImgAlbum from "@/components/Products/ProductImgAlbum";
 import Trending from "@/components/Trending";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,15 @@ const ProductPage = () => {
   const router = useRouter();
   const [item, setItem] = useState({});
   const [notify, setNotify] = useState(false);
+
+  useEffect(() => {
+    if (router.query.id) {
+      const filteredItem = allData.filter(
+        (item) => item.id === parseInt(router.query.id)
+      );
+      setItem(filteredItem[0]);
+    }
+  }, [router.query.id]);
 
   const amountHandler = (enteredAmount) => {
     addItem({
@@ -30,15 +40,6 @@ const ProductPage = () => {
     setNotify(!notify);
   };
 
-  useEffect(() => {
-    if (router.query.id) {
-      const filteredItem = allData.filter(
-        (item) => item.id === parseInt(router.query.id)
-      );
-      setItem(filteredItem[0]);
-    }
-  }, [router.query.id]);
-
   return (
     <>
       {/* <div
@@ -48,7 +49,13 @@ const ProductPage = () => {
         <p>Item has been added to the cart &nbsp; ✅</p>
       </div> */}
       <div className={`${styles.main} ${inter.className}`}>
-        <h3 className={styles.title}>{item.description}</h3>
+        <div className={styles.title}>
+          <Link href="/" className={styles.back}>
+            <FaAngleLeft />
+            <span>Back</span>
+          </Link>
+          <h3>{item.description}</h3>
+        </div>
         <div className={styles.product}>
           <ProductImgAlbum mainImg={item.img} otherImgs={item.otherImgs} />
           <ProductForm onAddToCart={amountHandler} {...item} />
@@ -68,14 +75,7 @@ const ProductPage = () => {
             <p className={styles.desc}>{item.size}</p>
           </div>
         </div>
-        {/* <Link
-          href="/"
-          className={styles.back}
-          onClick={() => window.scrollTo(0, 0)}
-        >
-          <FaAngleLeft />
-          <span>Back</span>
-        </Link> */}
+
         <Trending />
       </div>
     </>
