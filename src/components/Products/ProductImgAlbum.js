@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/ProductImgAlbum.module.css";
 
 const ProductImgAlbum = (props) => {
-  const [image, setImage] = useState(props.mainImg);
+  const [image, setImage] = useState(null);
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -12,9 +12,13 @@ const ProductImgAlbum = (props) => {
   return (
     <div className={styles.album}>
       <div className={styles.mainImg}>
-        {image && (
-          <Image src={image} alt="product" width={435} height={435} priority />
-        )}
+        <Image
+          src={image || props.mainImg}
+          alt="product"
+          width={435}
+          height={435}
+          priority
+        />
       </div>
       <div className={styles.container}>
         <div className={styles.img}>
@@ -45,8 +49,8 @@ const ProductImgAlbum = (props) => {
           {props.otherImgs && props.otherImgs[1] && (
             <Image
               onMouseOver={changeImage}
-              width={500}
-              height={500}
+              width={435}
+              height={435}
               src={props.otherImgs[1]}
               alt="product"
               priority
