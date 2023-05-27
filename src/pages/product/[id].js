@@ -7,6 +7,7 @@ import { FaAngleLeft } from "react-icons/fa";
 import CartContext from "@/context/cart-context";
 import { Inter } from "next/font/google";
 import ProductImgAlbum from "@/components/Products/ProductImgAlbum";
+import Trending from "@/components/Trending";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -75,6 +76,7 @@ const ProductPage = () => {
           <FaAngleLeft />
           <span>Back</span>
         </Link> */}
+        <Trending />
       </div>
     </>
   );
