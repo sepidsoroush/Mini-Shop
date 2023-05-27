@@ -10,10 +10,34 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 const links = [
-  { id: 1, title: "Live Comfortably", image: Main1, url: "/", grid: "one" },
-  { id: 2, title: "Skincare", image: Main2, url: "/", grid: "two" },
-  { id: 3, title: "Kitchen", image: Main3, url: "/", grid: "three" },
-  { id: 4, title: "Electronics", image: Main4, url: "/", grid: "four" },
+  {
+    id: 1,
+    title: "Live Comfortably",
+    image: Main1,
+    url: "/categories/chair",
+    grid: "one",
+  },
+  {
+    id: 2,
+    title: "Skincare",
+    image: Main2,
+    url: "/categories/skincare",
+    grid: "two",
+  },
+  {
+    id: 3,
+    title: "Kitchen",
+    image: Main3,
+    url: "/categories/kitchen",
+    grid: "three",
+  },
+  {
+    id: 4,
+    title: "Electronics",
+    image: Main4,
+    url: "/categories/electronic",
+    grid: "four",
+  },
 ];
 const Hero = () => {
   return (
