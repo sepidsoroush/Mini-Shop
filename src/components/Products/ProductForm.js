@@ -12,7 +12,7 @@ const ProductForm = (props) => {
       setEnteredAmount((prevState) => prevState - 1);
     }
   };
-  const addToCartHandler = (enteredAmount) => {
+  const addToCartHandler = () => {
     props.onAddToCart(enteredAmount);
   };
 

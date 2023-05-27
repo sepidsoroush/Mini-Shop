@@ -27,11 +27,11 @@ const ProductPage = () => {
     }
   }, [router.query.id]);
 
-  const amountHandler = (enteredAmount) => {
+  const amountHandler = (amount) => {
     addItem({
       id: item.id,
-      name: item.name,
-      amount: enteredAmount,
+      name: item.description,
+      amount: amount,
       price: item.price,
     });
   };
