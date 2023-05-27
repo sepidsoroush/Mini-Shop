@@ -22,31 +22,29 @@ const Categories = () => {
   };
   return (
     <div className={inter.className}>
-      <main>
-        <div className={styles.header}>
-          <div className={styles.title}>
-            <Link
-              href="/"
-              className={styles.back}
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              <FaAngleLeft />
-              <span>Home</span>
-            </Link>
-            <h3>{btnName}</h3>
-          </div>
-          <div className={styles.filters}>
-            {links.map((item) => {
-              const { id, title, url } = item;
-              return (
-                <Link key={id} href={url} onClick={() => handleBtnName(title)}>
-                  <button className={styles.btn}>{title}</button>
-                </Link>
-              );
-            })}
-          </div>
+      <div className={styles.header}>
+        <div className={styles.title}>
+          <Link
+            href="/"
+            className={styles.back}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <FaAngleLeft />
+            <span>Home</span>
+          </Link>
+          <h3>{btnName}</h3>
         </div>
-      </main>
+        <div className={styles.filters}>
+          {links.map((item) => {
+            const { id, title, url } = item;
+            return (
+              <Link key={id} href={url} onClick={() => handleBtnName(title)}>
+                <button className={styles.btn}>{title}</button>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

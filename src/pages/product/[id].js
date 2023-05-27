@@ -44,99 +44,97 @@ const Product = () => {
         <p>Item has been added to the cart &nbsp; ✅</p>
       </div>
       <div className={styles.main}>
-        <div className={styles.container}>
-          <div className={styles.product}>
-            <h3 className={styles.title}>{item.description}</h3>
-            <div className={styles.left}>
-              <div className={styles.bigImg}>
-                {image && (
+        <div className={styles.product}>
+          <h3 className={styles.title}>{item.description}</h3>
+          <div className={styles.left}>
+            <div className={styles.bigImg}>
+              {image && (
+                <Image
+                  src={image}
+                  alt="product"
+                  width={435}
+                  height={435}
+                  priority
+                />
+              )}
+            </div>
+            <div className={styles.small}>
+              <div className={styles.img}>
+                {item.img && (
                   <Image
-                    src={image}
-                    alt="product"
+                    onMouseOver={changeImage}
                     width={435}
                     height={435}
+                    src={item.img}
+                    alt="product"
                     priority
                   />
                 )}
               </div>
-              <div className={styles.small}>
-                <div className={styles.img}>
-                  {item.img && (
-                    <Image
-                      onMouseOver={changeImage}
-                      width={435}
-                      height={435}
-                      src={item.img}
-                      alt="product"
-                      priority
-                    />
-                  )}
-                </div>
-                <div className={styles.img}>
-                  {item.otherImgs && item.otherImgs[0] && (
-                    <Image
-                      onMouseOver={changeImage}
-                      width={435}
-                      height={435}
-                      src={item.otherImgs[0]}
-                      alt="product"
-                      priority
-                    />
-                  )}
-                </div>
-                <div className={styles.img}>
-                  {item.otherImgs && item.otherImgs[1] && (
-                    <Image
-                      onMouseOver={changeImage}
-                      width={500}
-                      height={500}
-                      src={item.otherImgs[1]}
-                      alt="product"
-                      priority
-                    />
-                  )}
-                </div>
+              <div className={styles.img}>
+                {item.otherImgs && item.otherImgs[0] && (
+                  <Image
+                    onMouseOver={changeImage}
+                    width={435}
+                    height={435}
+                    src={item.otherImgs[0]}
+                    alt="product"
+                    priority
+                  />
+                )}
               </div>
-            </div>
-            <div className={styles.right}>
-              <p className={styles.story}>{item.specs}</p>
-              <div className={styles.quant}>
-                <p>Quantity</p>
-                <div className={styles.btns}>
-                  <button onClick={removeItem}>-</button>
-                  <p className={styles.quantity}>{items.amount}</p>
-                  <button onClick={addItem}>+</button>
-                </div>
-                <p className={styles.price}>{calcPrice(items.amount)}.00$</p>
-              </div>
-              <div className={styles.addCart}>
-                <button
-                  onClick={() => {
-                    addItem(item, items.amount);
-                    showNotify();
-                  }}
-                  className={styles.addBtn}
-                >
-                  add to cart
-                </button>
-                <button className={styles.buyBtn}>buy now</button>
+              <div className={styles.img}>
+                {item.otherImgs && item.otherImgs[1] && (
+                  <Image
+                    onMouseOver={changeImage}
+                    width={500}
+                    height={500}
+                    src={item.otherImgs[1]}
+                    alt="product"
+                    priority
+                  />
+                )}
               </div>
             </div>
           </div>
+          <div className={styles.right}>
+            <p className={styles.story}>{item.specs}</p>
+            <div className={styles.quant}>
+              <p>Quantity</p>
+              <div className={styles.btns}>
+                <button onClick={removeItem}>-</button>
+                <p className={styles.quantity}>{items.amount}</p>
+                <button onClick={addItem}>+</button>
+              </div>
+              <p className={styles.price}>{calcPrice(items.amount)}.00$</p>
+            </div>
+            <div className={styles.addCart}>
+              <button
+                onClick={() => {
+                  addItem(item, items.amount);
+                  showNotify();
+                }}
+                className={styles.addBtn}
+              >
+                add to cart
+              </button>
+              <button className={styles.buyBtn}>buy now</button>
+            </div>
+          </div>
+        </div>
 
-          <div className={styles.specifications}>
-            <div className={styles.spec}>
-              <p className={styles.specTitle}>Texture:</p>
-              <p className={styles.desc}>{item.texture}</p>
-            </div>
-            <div className={styles.spec}>
-              <p className={styles.specTitle}>Weight:</p>
-              <p className={styles.desc}>{item.weight}</p>
-            </div>
-            <div className={styles.spec}>
-              <p className={styles.specTitle}>Size:</p>
-              <p className={styles.desc}>{item.size}</p>
-            </div>
+        <div className={styles.specifications}>
+          <div className={styles.spec}>
+            <p className={styles.specTitle}>Texture:</p>
+            <p className={styles.desc}>{item.texture}</p>
+          </div>
+          <div className={styles.spec}>
+            <p className={styles.specTitle}>Weight:</p>
+            <p className={styles.desc}>{item.weight}</p>
+          </div>
+          <div className={styles.spec}>
+            <p className={styles.specTitle}>Size:</p>
+            <p className={styles.desc}>{item.size}</p>
           </div>
         </div>
         <Link

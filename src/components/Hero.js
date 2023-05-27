@@ -19,14 +19,13 @@ const Hero = () => {
   return (
     <div className={inter.className}>
       <div className={styles.homeContainer}>
-        <main>
-          <div className={styles.gridContainer}>
-            {links.map((item) => {
-              const { id, title, image, url, grid } = item;
-              return (
-                <div
-                  key={id}
-                  className={`${styles.featured} 
+        <div className={styles.gridContainer}>
+          {links.map((item) => {
+            const { id, title, image, url, grid } = item;
+            return (
+              <div
+                key={id}
+                className={`${styles.featured} 
                             ${
                               grid === "one"
                                 ? styles.one
@@ -36,22 +35,21 @@ const Hero = () => {
                                 ? styles.three
                                 : styles.four
                             }`}
-                >
-                  <Link href={url}>
-                    <div className={styles.overlay}></div>
-                    <Image
-                      src={image}
-                      alt={title}
-                      className={styles.image}
-                      priority
-                    />
-                    <p className={styles.description}>{title}</p>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </main>
+              >
+                <Link href={url}>
+                  <div className={styles.overlay}></div>
+                  <Image
+                    src={image}
+                    alt={title}
+                    className={styles.image}
+                    priority
+                  />
+                  <p className={styles.description}>{title}</p>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

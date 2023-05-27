@@ -20,26 +20,24 @@ const Trending = () => {
 
   return (
     <div className={`${styles.trending} ${inter.className}`}>
-      <main>
-        <div className={styles.scrollbar}>
-          <h3>Trending Now</h3>
-          <div className={styles.btns}>
-            <button onClick={slideLeft}>
-              <FaArrowLeft />
-            </button>
-            <button onClick={slideRight}>
-              <FaArrowRight />
-            </button>
-          </div>
+      <div className={styles.scrollbar}>
+        <h3>Trending Now</h3>
+        <div className={styles.btns}>
+          <button onClick={slideLeft}>
+            <FaArrowLeft />
+          </button>
+          <button onClick={slideRight}>
+            <FaArrowRight />
+          </button>
         </div>
-        <ul className={styles.rowContainer} id="slider">
-          {filteredItems.map((item) => (
-            <li key={item.id}>
-              <Post {...item} />
-            </li>
-          ))}
-        </ul>
-      </main>
+      </div>
+      <ul className={styles.rowContainer} id="slider">
+        {filteredItems.map((item) => (
+          <li key={item.id}>
+            <Post {...item} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

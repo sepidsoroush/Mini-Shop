@@ -8,22 +8,20 @@ function Banner({ title, text, img, type }) {
   return (
     <div className={inter.className}>
       <div className={styles.main}>
-        <main>
-          <div className={type === "normal" ? styles.banner : styles.reverse}>
-            <div className={styles.sidetext}>
-              <div className={styles.text}>
-                <h2>{title}</h2>
-                <p>{text}</p>
-                <Link onClick={() => window.scrollTo(0, 0)} href="">
-                  <button>Shop now</button>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.image}>
-              <Image src={img} alt="banner" />
+        <div className={type === "normal" ? styles.banner : styles.reverse}>
+          <div className={styles.sidetext}>
+            <div className={styles.text}>
+              <h2>{title}</h2>
+              <p>{text}</p>
+              <Link onClick={() => window.scrollTo(0, 0)} href="">
+                <button>Shop now</button>
+              </Link>
             </div>
           </div>
-        </main>
+          <div className={styles.image}>
+            <Image src={img} alt="banner" />
+          </div>
+        </div>
       </div>
     </div>
   );
