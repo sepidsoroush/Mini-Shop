@@ -14,7 +14,7 @@ const ProductPage = () => {
   const { addItem } = useContext(CartContext);
   const router = useRouter();
   const [item, setItem] = useState({});
-  // const [notify, setNotify] = useState(false);
+  const [notify, setNotify] = useState(false);
 
   const amountHandler = (enteredAmount) => {
     addItem({
@@ -25,9 +25,9 @@ const ProductPage = () => {
     });
   };
 
-  // const showNotify = () => {
-  //   setNotify(!notify);
-  // };
+  const showNotify = () => {
+    setNotify(!notify);
+  };
 
   useEffect(() => {
     if (router.query.id) {
@@ -47,8 +47,8 @@ const ProductPage = () => {
         <p>Item has been added to the cart &nbsp; ✅</p>
       </div> */}
       <div className={`${styles.main} ${inter.className}`}>
+        <h3 className={styles.title}>{item.description}</h3>
         <div className={styles.product}>
-          <h3 className={styles.title}>{item.description}</h3>
           <ProductImgAlbum mainImg={item.img} otherImgs={item.otherImgs} />
           <ProductForm onAddToCart={amountHandler} {...item} />
         </div>

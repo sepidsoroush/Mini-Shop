@@ -1,203 +1,53 @@
 .main {
-    padding-top: 14rem;
-}
-.container{
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 19px;
+  padding-top: 14rem;
 }
 .product {
-    /* height: 100%; */
-    margin-bottom: 10rem;
-    width: 100%;
-    display: flex;
-    position: relative;
+  /* height: 100%; */
+  margin-bottom: 10rem;
+  width: 100%;
+  display: flex;
+  position: relative;
 }
 .title {
-    font-size: 3rem;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 auto;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 3rem auto;
 }
-.left {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bigImg {
-    width: 80%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-}
-
-.bigImg img {
-    height: 100%;
-    object-fit: cover;
-}
-
-.small {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50rem;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-.img{
-    flex: 1 1;
-    flex-shrink: 1;
-    display: block;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-.small img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.small img:hover {
-    outline: 1px solid rgba(0, 0, 0, 0.3);
-
-    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
-    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
-    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
-}
-
-.right {
-    width: 50%;
-    height: 100%;
-    background-color: #E5E5E5;
-    padding: 16rem 5rem 8rem 5rem;
-}
-
-.story {
-    font-size: 2rem;
-    margin-bottom: 5rem;
-    line-height: 1.5;
-}
-
-.quant {
-    display: flex;
-    justify-content: space-between;
-    font-size: 2.5rem;
-    margin-bottom: 5rem;
-    font-weight: 600;
-    align-items: center;
-}
-
-.btns {
-    display: flex;
-    border: 1px solid black;
-}
-
-.btns button {
-    font-size: 3rem;
-    width: 5.5rem;
-    height: 5.5rem;
-    color: black;
-    cursor: pointer;
-    background-color: white;
-    border: none;
-    transition: all 0.2s;
-}
-
-.btns button:first-child {
-    border-right: 1px solid black;
-}
-
-.btns button:last-child {
-    border-left: 1px solid black;
-}
-
-.btns button:hover {
-    background-color: transparent;
-}
-
-.btns p {
-    outline-offset: -2px;
-    width: 6rem;
-    height: 5rem;
-    text-align: center;
-    padding-top: 10px;
-}
-
-.addCart {
-    display: flex;
-    gap: 2rem;
-}
-
-.addCart button {
-    width: 50%;
-    height: 5.5rem;
-    border: none;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.addBtn {
-    background-color: transparent;
-    border: 2px solid black !important;
-}
-
-.addBtn:hover {
-    color: white;
-    background-color: black;
-}
-
-.buyBtn {
-    background-color: #B6002C;
-    color: white;
-    border: 2px solid #B6002C !important;
-}
-
-.buyBtn:hover {
-    background-color: transparent;
-    color: #B6002C;
-}
-
 .specifications {
-    display: flex;
-    gap: 3rem;
-    justify-content: space-between;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 10rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 10rem;
 }
 
 .spec {
-    background-color: #E5E5E5;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem;
+  background-color: #e5e5e5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 .specTitle {
-    font-size: 2.2rem;
-    font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 600;
 }
 
 .desc {
-    font-size: 1.65rem;
+  font-size: 1.65rem;
 }
 .back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    font-size: 2rem;
-    margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  margin: 4rem 0;
 }
 /* notify */
 
@@ -222,81 +72,77 @@
 } */
 
 @keyframes slidein {
-    0% {
-        top: -100%;
-    }
+  0% {
+    top: -100%;
+  }
 
-    40% {
-        top: 90px;
-    }
+  40% {
+    top: 90px;
+  }
 
-    60% {
-        top: 90px;
-    }
+  60% {
+    top: 90px;
+  }
 
-    100% {
-        top: -100%;
-    }
+  100% {
+    top: -100%;
+  }
 }
 
-@media (max-width:900px) {
-    .right {
-        padding: 16rem 2rem 8rem 2rem;
-    }
+@media (max-width: 900px) {
+  .right {
+    padding: 16rem 2rem 8rem 2rem;
+  }
 }
 
-@media (max-width:850px) {
-    .product {
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-        margin-bottom: 6rem;
+@media (max-width: 850px) {
+  .product {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 6rem;
+  }
 
-    }
+  .right {
+    width: 100%;
+    padding: 3rem 2rem 4rem 2rem;
+  }
 
-    .right {
-        width: 100%;
-        padding: 3rem 2rem 4rem 2rem;
-    }
+  .left {
+    width: 100%;
+  }
 
-    .left {
-        width: 100%;
-    }
-
-    .title {
-        width: 31rem;
-        text-align: center;
-    }
+  .title {
+    width: 31rem;
+    text-align: center;
+  }
 }
 
-@media (max-width:570px) {
-
-    .specifications {
-        gap: 2rem;
-        flex-direction: column;
-        margin-bottom: 28rem;
-    }
+@media (max-width: 570px) {
+  .specifications {
+    gap: 2rem;
+    flex-direction: column;
+    margin-bottom: 28rem;
+  }
 }
 
-@media (max-width:450px) {
-    .quant {
-        flex-direction: column;
-        gap: 2rem;
-    }
+@media (max-width: 450px) {
+  .quant {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .specs {
-        margin-bottom: 2rem;
-    }
+  .specs {
+    margin-bottom: 2rem;
+  }
 
-    .addCart {
-        gap: 2rem;
-        width: 100%;
-        flex-direction: column;
-    }
+  .addCart {
+    gap: 2rem;
+    width: 100%;
+    flex-direction: column;
+  }
 
-    .addCart button {
-        width: 100%;
-    }
-
-
+  .addCart button {
+    width: 100%;
+  }
 }
