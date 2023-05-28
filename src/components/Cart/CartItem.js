@@ -1,16 +1,19 @@
 import { useContext } from "react";
 import CartContext from "@/context/cart-context";
 import styles from "@/styles/CartItem.module.css";
-// import { FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
 const CartItem = () => {
-  const { items, removeItem, addItem } = useContext(CartContext);
+  const { items, removeItem, addItem, deleteItem } = useContext(CartContext);
 
   const removeItemHandler = () => {
     removeItem();
   };
   const addItemHandler = () => {
     addItem();
+  };
+  const deleteItemHandler = (id) => {
+    deleteItem(id);
   };
 
   const calcPrice = (quantity, price) => {
@@ -28,15 +31,15 @@ const CartItem = () => {
             <p className={styles.name}>{item.description}</p>
             <div className={styles.btns}>
               <button onClick={removeItemHandler}>-</button>
-              <p className={styles.quantity}>{items.amount}</p>
+              <p>{items.amount}</p>
               <button onClick={addItemHandler}>+</button>
             </div>
           </div>
-          <div className={styles.right}>
+          <div className={styles.info}>
             <p className={styles.price}>
               {calcPrice(item.amount, item.price)}.00$
             </p>
-            {/* <FaTimes onClick={() => handleCartItemRemove(id, item)} /> */}
+            <FaTimes onClick={deleteItemHandler} />
           </div>
         </div>
       ))}

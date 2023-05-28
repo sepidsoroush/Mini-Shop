@@ -1,59 +1,59 @@
-.item{
-    background-color: #f2f2f2;
-    border: 1px solid #717171;
-    border-radius: 3px;
-    display: grid;
-    grid-template-columns: 30fr 50fr 20fr;
-    height: 15rem;
-    width: 100%;
+.item {
+  background-color: #f2f2f2;
+  border: 1px solid #717171;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 30fr 50fr 20fr;
+  height: 15rem;
+  width: 100%;
 }
 .image {
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
 }
 .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
 }
 .middle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
 }
 .name {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 .btns {
-    display: flex;
+  display: flex;
 }
 .btns button {
-    font-size: 2rem;
-    width: 3rem;
-    height: 3rem;
-    background-color: black;
-    color: white;
-    cursor: pointer;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 .btns p {
-    font-size: 2rem;
-    outline: 2px solid black;
-    outline-offset: -2px;
-    width: 3rem;
-    text-align: center;
-    padding-top: 3.5px;
+  font-size: 2rem;
+  outline: 2px solid black;
+  outline-offset: -2px;
+  width: 3rem;
+  text-align: center;
+  padding-top: 3.5px;
 }
-.right {
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    justify-content: space-between;
-    padding: 1.5rem;
-    text-align: right;
-    font-size: 2.4rem;
-    cursor: pointer;
+.info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: right;
+  font-size: 2.4rem;
+  cursor: pointer;
 }
