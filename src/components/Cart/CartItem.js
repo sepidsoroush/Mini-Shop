@@ -11,10 +11,10 @@ const CartItem = (props) => {
   const { removeItem, addItem, deleteItem } = useContext(CartContext);
 
   const removeItemHandler = () => {
-    removeItem();
+    removeItem(id);
   };
   const addItemHandler = () => {
-    addItem();
+    addItem({ ...props.item, amount: 1 });
   };
   const deleteItemHandler = () => {
     deleteItem(id);
