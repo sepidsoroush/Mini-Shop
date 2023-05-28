@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const CartItem = (props) => {
   const { id, name, amount, price } = props.item;
-  const image = allData[id].img;
+  const image = allData[id - 1].img;
   const { removeItem, addItem, deleteItem } = useContext(CartContext);
 
   const removeItemHandler = () => {
@@ -16,7 +16,7 @@ const CartItem = (props) => {
   const addItemHandler = () => {
     addItem();
   };
-  const deleteItemHandler = (id) => {
+  const deleteItemHandler = () => {
     deleteItem(id);
   };
 
@@ -34,8 +34,8 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={styles.info}>
-        <p className={styles.price}>{amount * price}.00$</p>
-        <FaTimes onClick={deleteItemHandler} />
+        <p>{amount * price}.00$</p>
+        <FaTimes onClick={deleteItemHandler} className={styles.icon} />
       </div>
     </div>
   );
