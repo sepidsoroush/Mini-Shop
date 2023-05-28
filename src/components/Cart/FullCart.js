@@ -22,11 +22,11 @@ const FullCart = (props) => {
         </div>
       </div>
       <div className={styles.subtotal}>
-        <div className={styles.right}>
+        <div className={styles.price}>
           <p>Subtotal</p>
           <p>{totalAmount + ".00$"}</p>
         </div>
-        <div className={styles.left}>
+        <div className={styles.action}>
           <Link href="#">Go to Checkout</Link>
         </div>
       </div>

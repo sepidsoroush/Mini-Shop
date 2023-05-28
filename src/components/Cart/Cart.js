@@ -1,4 +1,4 @@
-import styles from "@/styles/Navbar.module.css";
+import styles from "@/styles/Cart.module.css";
 import { useContext } from "react";
 import FullCart from "./FullCart";
 import EmptyCart from "./EmptyCart";
