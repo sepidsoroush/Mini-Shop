@@ -12,12 +12,16 @@ const FullCart = (props) => {
     <>
       <div className={styles.main}>
         <div className={styles.fullCart}>
-          {items.map((item, id) =>
-            items.length !== 0 ? (
-              <CartItem key={id} item={item} />
-            ) : (
-              <EmptyCart key={id} onClose={props.onClose} />
-            )
+          {items.length === 0 ? (
+            <EmptyCart onClose={props.onClose} />
+          ) : (
+            <ul>
+              {items.map((item) => (
+                <li key={item.id}>
+                  <CartItem item={item} />
+                </li>
+              ))}
+            </ul>
           )}
         </div>
       </div>

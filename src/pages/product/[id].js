@@ -13,7 +13,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 const ProductPage = () => {
-  const { items, addItem } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
   const router = useRouter();
   const [item, setItem] = useState({});
   const [notify, setNotify] = useState(false);
@@ -35,7 +35,6 @@ const ProductPage = () => {
       price: item.price,
     });
   };
-  console.log(items);
 
   const showNotify = () => {
     setNotify(!notify);
