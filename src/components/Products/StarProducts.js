@@ -1,6 +1,6 @@
-import { items } from "./AllData";
+import { items } from "../AllData";
 import styles from "@/styles/StarProducts.module.css";
-import Post from "../components/Products/Post";
+import Post from "./Post";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });

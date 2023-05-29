@@ -1,7 +1,7 @@
-import Banner from "@/components/Banner";
-import Hero from "@/components/Hero";
-import StarProducts from "@/components/StarProducts";
-import Trending from "@/components/Trending";
+import Banner from "@/components/Products/Banner";
+import Hero from "@/components/Products/Hero";
+import StarProducts from "@/components/Products/StarProducts";
+import Trending from "@/components/Products/Trending";
 import Banner1 from "../img/banner/banner1.jpg";
 import Banner2 from "../img/banner/banner2.jpg";
 

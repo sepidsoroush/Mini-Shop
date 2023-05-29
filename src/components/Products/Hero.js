@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import Main1 from "../img/header/home-img-1.jpg";
-import Main2 from "../img/header/home-img-2.jpg";
-import Main3 from "../img/header/home-img-3.jpg";
-import Main4 from "../img/header/home-img-4.jpg";
+import Main1 from "../../img/header/home-img-1.jpg";
+import Main2 from "../../img/header/home-img-2.jpg";
+import Main3 from "../../img/header/home-img-3.jpg";
+import Main4 from "../../img/header/home-img-4.jpg";
 import styles from "@/styles/Hero.module.css";
 import { Inter } from "next/font/google";
 

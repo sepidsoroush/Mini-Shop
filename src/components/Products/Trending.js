@@ -1,6 +1,6 @@
 import styles from "@/styles/Trending.module.css";
-import Post from "../components/Products/Post";
-import { items } from "./AllData";
+import Post from "./Post";
+import { items } from "../AllData";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Inter } from "next/font/google";
 

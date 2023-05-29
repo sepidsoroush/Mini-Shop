@@ -7,7 +7,7 @@ import { FaAngleLeft } from "react-icons/fa";
 import CartContext from "@/context/cart-context";
 import { Inter } from "next/font/google";
 import ProductImgAlbum from "@/components/Products/ProductImgAlbum";
-import Trending from "@/components/Trending";
+import Trending from "@/components/Products/Trending";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
