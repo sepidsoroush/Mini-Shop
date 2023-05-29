@@ -7,7 +7,14 @@ const Post = (props) => {
   return (
     <>
       <Link key={id} className={styles.product} href={`/product/${id}`}>
-        <Image src={img} alt={description} className={styles.image} priority />
+        <Image
+          src={img}
+          alt={description}
+          className={styles.image}
+          width="435"
+          height="435"
+          priority
+        />
         <p className={styles.details}>{description}</p>
         <p className={styles.price}>{price}$</p>
       </Link>

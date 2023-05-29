@@ -6,8 +6,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Trending = () => {
-  const filteredItems = items.filter((item) => item.trend);
+const Trending = (props) => {
   const slideLeft = () => {
     let slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 235;
@@ -32,7 +31,7 @@ const Trending = () => {
         </div>
       </div>
       <ul className={styles.rowContainer} id="slider">
-        {filteredItems.map((item) => (
+        {props.items.map((item) => (
           <li key={item.id}>
             <Post {...item} />
           </li>
