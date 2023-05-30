@@ -1,5 +1,3 @@
-// import { items } from "../AllData";
-import { useEffect, useState } from "react";
 import styles from "@/styles/StarProducts.module.css";
 import Post from "./Post";
 import { Inter } from "next/font/google";
