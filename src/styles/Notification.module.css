@@ -2,9 +2,9 @@
   color: white;
   background-color: #373737;
   padding: 1.2rem 2.2rem;
-  z-index: 999999999;
+  z-index: 101;
   font-size: 2rem;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%);
   top: -100%;
   left: 50%;
