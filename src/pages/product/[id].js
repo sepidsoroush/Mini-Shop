@@ -1,17 +1,19 @@
-import ProductForm from "@/components/Products/ProductForm";
-import { useContext } from "react";
-import styles from "@/styles/ProductPage.module.css";
-import { FaAngleLeft } from "react-icons/fa";
+import { useContext, useState } from "react";
 import CartContext from "@/context/cart-context";
-import { Inter } from "next/font/google";
+import ProductForm from "@/components/Products/ProductForm";
 import ProductImgAlbum from "@/components/Products/ProductImgAlbum";
 import Trending from "@/components/Products/Trending";
+import Notification from "@/components/UI/Notification";
+import styles from "@/styles/ProductPage.module.css";
+import { FaAngleLeft } from "react-icons/fa";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const ProductPage = (props) => {
   const { addItem } = useContext(CartContext);
+  const [notify, setNotify] = useState(false);
 
   const amountHandler = (amount) => {
     addItem({
@@ -21,20 +23,25 @@ const ProductPage = (props) => {
       price: props.item.price,
       img: props.item.img,
     });
+    showNotify();
   };
 
-  // const showNotify = () => {
-  //   setNotify(!notify);
-  // };
+  const showNotify = () => {
+    setNotify(true);
+  };
+  const endNotify = () => {
+    setNotify(false);
+  };
 
   return (
     <>
-      {/* <div
-        onAnimationEnd={() => setNotify(false)}
-        className={`${styles.notify} ${notify ? styles.slidein : ""}`}
-      >
-        <p>Item has been added to the cart &nbsp; ✅</p>
-      </div> */}
+      {notify && (
+        <Notification
+          status={notify}
+          message="Item has been added to the cart &nbsp; ✅"
+          onAnimationEnd={endNotify}
+        />
+      )}
       <div className={`${styles.main} ${inter.className}`}>
         <div className={styles.title}>
           <Link href="/" className={styles.back}>

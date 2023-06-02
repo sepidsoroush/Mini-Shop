@@ -1,22 +1,35 @@
+import { useContext, useEffect, useState } from "react";
+import CartContext from "@/context/cart-context";
 import styles from "@/styles/Notification.module.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const Notification = (props) => {
-  let specialClasses = "";
+  const [btnHighlighted, setBtnHighlighted] = useState(false);
+  const { items } = useContext(CartContext);
+  const btnClasses = `${inter.className} ${styles.notify} ${
+    props.status && btnHighlighted ? styles.slidein : ""
+  }`;
 
-  if (props.status === "error") {
-    specialClasses = styles.error;
-  }
-  if (props.status === "success") {
-    specialClasses = styles.success;
-  }
+  useEffect(() => {
+    if (items.length === 0) {
+      return;
+    }
+    setBtnHighlighted(true);
+    const timer = setTimeout(() => {
+      setBtnHighlighted(false);
+    }, 3000);
 
-  const cssClasses = `${styles.notification} ${specialClasses}`;
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [items]);
 
   return (
-    <section className={cssClasses}>
-      <h2>{props.title}</h2>
+    <div className={btnClasses}>
       <p>{props.message}</p>
-    </section>
+    </div>
   );
 };
 
