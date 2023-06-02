@@ -34,7 +34,7 @@ const Navbar = (props) => {
           <Link onClick={() => window.scrollTo(0, 0)} href="/categories/all">
             categories
           </Link>
-          <Link onClick={() => window.scrollTo(0, 0)} href="/product/19">
+          <Link onClick={() => window.scrollTo(0, 0)} href="/product/p19">
             products
           </Link>
           <CartButton onClick={openCartHandler} />

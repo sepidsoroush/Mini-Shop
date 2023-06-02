@@ -19,6 +19,7 @@ const ProductPage = (props) => {
       name: props.item.description,
       amount: amount,
       price: props.item.price,
+      img: props.item.img,
     });
   };
 
