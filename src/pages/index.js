@@ -13,7 +13,25 @@ const HomePage = () => {
 
   useEffect(() => {
     const transformData = (dataObj) => {
-      setProducts(dataObj);
+      const loadedData = [];
+
+      for (const key in dataObj) {
+        loadedData.push({
+          id: key,
+          category: dataObj[key].category,
+          img: dataObj[key].img,
+          description: dataObj[key].description,
+          price: dataObj[key].price,
+          otherImgs: dataObj[key].otherImgs,
+          specs: dataObj[key].specs,
+          texture: dataObj[key].texture,
+          weight: dataObj[key].weight,
+          size: dataObj[key].size,
+          star: dataObj[key].star,
+          trend: dataObj[key].trend,
+        });
+      }
+      setProducts(loadedData);
     };
 
     fetchProducts(
@@ -22,14 +40,10 @@ const HomePage = () => {
       },
       transformData
     );
-  }, [fetchProducts]);
+  }, []);
 
-  const starProducts = products
-    .filter((item) => item)
-    .filter((item) => item.star);
-  const trendProducts = products
-    .filter((item) => item)
-    .filter((item) => item.trend);
+  const starProducts = products.filter((item) => item.star);
+  const trendProducts = products.filter((item) => item.trend);
 
   return (
     <>
