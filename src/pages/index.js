@@ -2,8 +2,8 @@ import Banner from "@/components/Products/Banner";
 import Hero from "@/components/Products/Hero";
 import StarProducts from "@/components/Products/StarProducts";
 import Trending from "@/components/Products/Trending";
-import Banner1 from "../img/banner/banner1.jpg";
-import Banner2 from "../img/banner/banner2.jpg";
+import Banner1 from "../assets/banner/banner1.jpg";
+import Banner2 from "../assets/banner/banner2.jpg";
 import { useEffect, useState } from "react";
 import useHttp from "@/hooks/use-http";
 

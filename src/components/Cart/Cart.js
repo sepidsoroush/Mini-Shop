@@ -15,7 +15,7 @@ const Cart = (props) => {
   };
 
   return (
-    <div className={inter.className}>
+    <>
       {/* overlay */}
       <div
         onClick={closeCartHandler}
@@ -25,7 +25,7 @@ const Cart = (props) => {
       ></div>
       {/* cart */}
       <div
-        className={`${styles.cart} ${
+        className={`${styles.cart} ${inter.className} ${
           items ? styles.opencart : styles.closedcart
         }`}
       >
@@ -42,7 +42,7 @@ const Cart = (props) => {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

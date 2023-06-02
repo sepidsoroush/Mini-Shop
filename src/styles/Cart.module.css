@@ -1,14 +1,14 @@
 /* overlay */
 
 .overlay {
-  position: absolute;
+  background-color: #00000075;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00000075;
-  z-index: 888;
+  position: fixed;
   transition: all 0.3s ease-in;
+  z-index: 888;
 }
 .openflex {
   display: flex !important;
@@ -65,7 +65,10 @@
   width: 16rem;
   margin: 15rem auto;
 }
-
+.empty img {
+  width: 160px;
+  height: 170px;
+}
 .empty p {
   font-size: 2rem;
   font-weight: 600;

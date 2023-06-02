@@ -1,4 +1,4 @@
-import EmptyCartImg from "../../img/cart/empty-cart.png";
+import EmptyCartImg from "../../assets/cart/empty-cart.png";
 import styles from "@/styles/Cart.module.css";
 import Image from "next/image";
 
