@@ -19,6 +19,7 @@ const HomePage = () => {
         loadedData.push({
           id: key,
           category: dataObj[key].category,
+          path: dataObj[key].id,
           img: dataObj[key].img,
           description: dataObj[key].description,
           price: dataObj[key].price,

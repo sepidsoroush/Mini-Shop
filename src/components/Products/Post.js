@@ -3,10 +3,10 @@ import Image from "next/image";
 import styles from "@/styles/Post.module.css";
 
 const Post = (props) => {
-  const { id, img, description, price } = props;
+  const { id, path, img, description, price } = props;
   return (
     <>
-      <Link key={id} className={styles.product} href={`/product/${id}`}>
+      <Link key={id} className={styles.product} href={`/product/${path}`}>
         <Image
           src={img}
           alt={description}
