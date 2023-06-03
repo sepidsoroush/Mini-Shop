@@ -15,6 +15,7 @@ const ProductPage = (props) => {
   const { addItem } = useContext(CartContext);
   const [notify, setNotify] = useState(false);
   const [message, setMessage] = useState("");
+  const [defaultAmount, setDefaultAmount] = useState(0);
 
   const amountHandler = (amount) => {
     addItem({
@@ -57,7 +58,11 @@ const ProductPage = (props) => {
             mainImg={props.item.img}
             otherImgs={props.item.otherImgs}
           />
-          <ProductForm onAddToCart={amountHandler} {...props.item} />
+          <ProductForm
+            onAddToCart={amountHandler}
+            defaultAmount={defaultAmount}
+            info={...props.item}
+          />
         </div>
 
         <div className={styles.specifications}>

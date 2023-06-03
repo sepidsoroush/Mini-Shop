@@ -1,9 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import CartContext from "@/context/cart-context";
 import styles from "@/styles/ProductForm.module.css";
 
 const ProductForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState(0);
   const [inputIsValid, setInputIsValid] = useState(false);
+  const { items } = useContext(CartContext);
+
+  useEffect(() => {
+    const existingItemIndex = items.findIndex(
+      (item) => item.id === props.info.id
+    );
+    if (existingItemIndex >= 0) {
+      const existingamount = items[existingItemIndex].amount;
+      setEnteredAmount(existingamount);
+    } else {
+      setEnteredAmount(0);
+    }
+  }, [props.info, items]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -33,7 +47,7 @@ const ProductForm = (props) => {
 
   return (
     <div className={styles.form}>
-      <p className={styles.story}>{props.specs}</p>
+      <p className={styles.story}>{props.info.specs}</p>
       <div className={styles.quant}>
         <p>Quantity</p>
         <div className={styles.btns}>
@@ -41,7 +55,7 @@ const ProductForm = (props) => {
           <p className={styles.quantity}>{enteredAmount}</p>
           <button onClick={increaseHandler}>+</button>
         </div>
-        <p className={styles.price}>{props.price}.00$</p>
+        <p className={styles.price}>{props.info.price}.00$</p>
       </div>
       {inputIsValid && (
         <p className={styles.error}>❌ Please Enter a valid quantity (1-10)</p>
