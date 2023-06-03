@@ -14,8 +14,6 @@ const inter = Inter({ subsets: ["latin"] });
 const ProductPage = (props) => {
   const { addItem } = useContext(CartContext);
   const [notify, setNotify] = useState(false);
-  const [message, setMessage] = useState("");
-  const [defaultAmount, setDefaultAmount] = useState(0);
 
   const amountHandler = (amount) => {
     addItem({
@@ -26,14 +24,17 @@ const ProductPage = (props) => {
       img: props.item.img,
     });
     showNotify();
-    setMessage("✅ Item has been added to the cart");
   };
 
   const showNotify = () => {
     setNotify(true);
-  };
-  const endNotify = () => {
-    setNotify(false);
+    const timer = setTimeout(() => {
+      setNotify(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   };
 
   return (
@@ -41,8 +42,7 @@ const ProductPage = (props) => {
       {notify && (
         <Notification
           status={notify}
-          message={message}
-          onAnimationEnd={endNotify}
+          message="✅ Item has been added to the cart"
         />
       )}
       <div className={`${styles.main} ${inter.className}`}>
@@ -58,11 +58,7 @@ const ProductPage = (props) => {
             mainImg={props.item.img}
             otherImgs={props.item.otherImgs}
           />
-          <ProductForm
-            onAddToCart={amountHandler}
-            defaultAmount={defaultAmount}
-            info={...props.item}
-          />
+          <ProductForm onAddToCart={amountHandler} info={props.item} />
         </div>
 
         <div className={styles.specifications}>
