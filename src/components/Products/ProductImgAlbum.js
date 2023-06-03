@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "@/styles/ProductImgAlbum.module.css";
 
 const ProductImgAlbum = (props) => {
+  const url =
+    "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
   const [image, setImage] = useState(null);
+
+  useEffect(() => {
+    setImage(props.mainImg);
+  }, [props.mainImg]);
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -13,7 +19,7 @@ const ProductImgAlbum = (props) => {
     <div className={styles.album}>
       <div className={styles.mainImg}>
         <Image
-          src={image || props.mainImg}
+          src={image || url}
           alt="product"
           width={435}
           height={435}

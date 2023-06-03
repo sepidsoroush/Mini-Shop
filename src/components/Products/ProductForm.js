@@ -24,7 +24,7 @@ const ProductForm = (props) => {
     }
   };
   const addToCartHandler = () => {
-    if (enteredAmount < 1 || enteredAmount > 5) {
+    if (enteredAmount < 1 || enteredAmount > 10) {
       setInputIsValid(true);
     } else {
       props.onAddToCart(enteredAmount);
