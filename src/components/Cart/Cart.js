@@ -20,13 +20,13 @@ const Cart = (props) => {
       <div
         onClick={closeCartHandler}
         className={`${styles.overlay} ${
-          props.show ? styles.openflex : styles.closedflex
+          props.show ? styles.openOverlay : styles.closedOverlay
         }`}
       ></div>
       {/* cart */}
       <div
         className={`${styles.cart} ${inter.className} ${
-          items ? styles.opencart : styles.closedcart
+          props.show ? styles.opencart : styles.closedcart
         }`}
       >
         <div className={styles.header}>

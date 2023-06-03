@@ -10,11 +10,11 @@
   transition: all 0.3s ease-in;
   z-index: 888;
 }
-.openflex {
+.openOverlay {
   display: flex !important;
 }
 
-.closedflex {
+.closedOverlay {
   display: none !important;
 }
 
@@ -31,13 +31,13 @@
   background-color: white;
   height: 100vh;
   width: 50rem;
-  transition: all 0.4s ease;
+  transition: all 0.3s linear;
 }
 .closedcart {
-  right: -100%;
+  transform: translateX(100%);
 }
 .opencart {
-  right: 0;
+  transform: translateX(0);
 }
 .header {
   font-size: 1.7rem;
