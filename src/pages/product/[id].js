@@ -14,6 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 const ProductPage = (props) => {
   const { addItem } = useContext(CartContext);
   const [notify, setNotify] = useState(false);
+  const [message, setMessage] = useState("");
 
   const amountHandler = (amount) => {
     addItem({
@@ -24,6 +25,7 @@ const ProductPage = (props) => {
       img: props.item.img,
     });
     showNotify();
+    setMessage("✅ Item has been added to the cart");
   };
 
   const showNotify = () => {
@@ -38,7 +40,7 @@ const ProductPage = (props) => {
       {notify && (
         <Notification
           status={notify}
-          message="Item has been added to the cart &nbsp; ✅"
+          message={message}
           onAnimationEnd={endNotify}
         />
       )}

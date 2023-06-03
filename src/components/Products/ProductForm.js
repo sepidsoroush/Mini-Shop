@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "@/styles/ProductForm.module.css";
 
 const ProductForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState(0);
+  const [inputIsValid, setInputIsValid] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setInputIsValid(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [inputIsValid]);
 
   const increaseHandler = () => {
     setEnteredAmount((prevState) => prevState + 1);
@@ -13,7 +24,11 @@ const ProductForm = (props) => {
     }
   };
   const addToCartHandler = () => {
-    props.onAddToCart(enteredAmount);
+    if (enteredAmount < 1 || enteredAmount > 5) {
+      setInputIsValid(true);
+    } else {
+      props.onAddToCart(enteredAmount);
+    }
   };
 
   return (
@@ -28,6 +43,9 @@ const ProductForm = (props) => {
         </div>
         <p className={styles.price}>{props.price}.00$</p>
       </div>
+      {inputIsValid && (
+        <p className={styles.error}>❌ Please Enter a valid quantity (1-10)</p>
+      )}
       <div className={styles.addCart}>
         <button onClick={addToCartHandler} className={styles.addBtn}>
           add to cart

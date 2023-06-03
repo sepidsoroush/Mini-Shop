@@ -56,6 +56,13 @@
   padding-top: 15px;
 }
 
+.error {
+  font-size: 12px;
+  color: #b6002c;
+  margin-top: -4rem;
+  position: absolute;
+}
+
 .addCart {
   display: flex;
   gap: 2rem;
