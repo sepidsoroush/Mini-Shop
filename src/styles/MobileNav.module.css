@@ -1,0 +1,49 @@
+/* hamburget menu */
+.mobileNav {
+  background-color: #f3f3f3;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.openflex {
+  display: flex !important;
+}
+.closedflex {
+  display: none !important;
+}
+.icon {
+  font-size: 2.3rem;
+  position: absolute;
+  right: 25px;
+  top: 49px;
+  cursor: pointer;
+}
+
+.mobileLinks {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  top: 44%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.mobileLinks a {
+  color: black;
+  text-decoration: none;
+}
+.mobileLinks a:hover {
+  text-decoration: underline;
+}
+.hamburger {
+  display: none;
+  gap: 3rem;
+}

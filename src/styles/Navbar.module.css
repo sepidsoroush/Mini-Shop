@@ -1,5 +1,4 @@
 /* Navbar style */
-
 .navbar {
   -webkit-box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.23);
@@ -40,6 +39,20 @@
 .links a:hover {
   text-decoration: underline;
 }
-.links i {
+.bars {
+  font-size: 2.3rem;
+  display: none;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .bars {
+    display: flex;
+  }
 }
