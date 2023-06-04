@@ -8,7 +8,7 @@ const StarProducts = (props) => {
   return (
     <div className={`${styles.mainContainer} ${inter.className}`}>
       <h2 className={styles.title}>Products we are proud of</h2>
-      <ul className={styles.flexbox}>
+      <ul className={styles.grid}>
         {props.items.map((item) => (
           <li key={item.id}>
             <Post {...item} />

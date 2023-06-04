@@ -3,7 +3,6 @@
   outline-offset: -2px;
   transition: all 0.15s ease-in;
   cursor: pointer;
-  width: 27rem;
   height: 40rem;
   box-sizing: border-box;
   display: flex;
@@ -33,16 +32,4 @@
 .price {
   font-weight: 600;
   font-size: 2.2rem;
-}
-/* mobile */
-@media (max-width: 700px) {
-  .product {
-    width: 25rem;
-  }
-}
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .product {
-    width: 22rem;
-  }
 }
