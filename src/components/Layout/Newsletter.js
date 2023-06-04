@@ -1,7 +1,7 @@
-import styles from '@/styles/Newletter.module.css'
-import { Inter } from 'next/font/google'
+import styles from "@/styles/Newletter.module.css";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 function Newsletter() {
   return (
@@ -9,8 +9,8 @@ function Newsletter() {
       <div className={styles.news}>
         <div>
           <h2>Newsletter</h2>
-          <form>
-            <input type="email" placeholder="your@email.com" />
+          <form name="newsletter">
+            <input type="email" name="email" placeholder="your@email.com" />
             <button type="submit">Subscribe</button>
           </form>
         </div>

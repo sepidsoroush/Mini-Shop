@@ -1,43 +1,48 @@
 .news {
-    background-color: #191919;
-    height: 28rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #191919;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .news h2 {
-    color: white;
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .news input {
-    font-size: 1.7rem;
-    padding: .7rem;
-    margin-right: .7rem;
-    border: none;
-    outline: none;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  margin-right: 0.7rem;
+  border: none;
+  outline: none;
 }
 
 .news button {
-    font-size: 1.7rem;
-    padding: .7rem;
-    border: none;
-    cursor: pointer;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  border: none;
+  cursor: pointer;
+  background-color: #b6002c;
+  color: white;
+}
+.news button:hover {
+  opacity: 0.8;
 }
 
-@media (max-width:400px) {
-    .news form {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-    }
+@media (max-width: 400px) {
+  .news form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-    .news input {
-        margin-right: 0;
-        text-align: center;
-    }
+  .news input {
+    margin-right: 0;
+    text-align: center;
+  }
 }
