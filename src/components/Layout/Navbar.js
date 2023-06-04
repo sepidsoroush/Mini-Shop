@@ -51,7 +51,10 @@ const Navbar = (props) => {
             <CartButton onClick={openCartHandler} />
           </div>
           <div className={styles.hamburger}>
-            <CartButton onClick={openCartHandler} />
+            <CartButton
+              onClick={openCartHandler}
+              className={styles.MobileCart}
+            />
             <FaBars
               onClick={mobileNavbarHandler}
               className={styles.bars}

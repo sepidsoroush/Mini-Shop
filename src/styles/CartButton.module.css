@@ -1,19 +1,12 @@
 .button {
   cursor: pointer;
-  font: inherit;
+  font-size: 2.3rem;
   border: none;
-  background-color: #e5e5e5;
-  padding: 0.75rem 3rem;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
   font-weight: bold;
-}
-
-.button:hover,
-.button:active {
-  background-color: #efefef;
 }
 
 .icon {
@@ -22,27 +15,43 @@
   margin-right: 0.5rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.badge {
+.icon::after {
+  content: "";
+  top: -18px;
+  position: absolute;
+  left: 12px;
+  font-size: 11px;
   background-color: #b6002c;
-  padding: 0.25rem 1rem;
-  border-radius: 25px;
-  margin-left: 0.5rem;
-  font-size: 15px;
-  font-weight: 500;
   color: white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  display: none;
 }
 
-.button:hover .badge,
-.button:active .badge {
-  background-color: #92320c;
+.items::after {
+  content: attr(data-array-length);
+  top: -18px;
+  position: absolute;
+  left: 12px;
+  font-size: 11px;
+  background-color: #b6002c;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  display: block;
 }
-
 .bump {
   animation: bump 300ms ease-out;
 }
-
 @keyframes bump {
   0% {
     transform: scale(1);

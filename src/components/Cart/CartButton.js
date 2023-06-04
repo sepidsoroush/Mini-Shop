@@ -27,10 +27,12 @@ const CartButton = (props) => {
 
   return (
     <button className={btnClasses} onClick={props.onClick}>
-      <span className={styles.icon}>
+      <span
+        data-array-length={totalOrders}
+        className={`${styles.icon} ${totalOrders > 0 ? styles.items : ""}`}
+      >
         <FaShoppingCart />
       </span>
-      <span className={styles.badge}>{totalOrders}</span>
     </button>
   );
 };

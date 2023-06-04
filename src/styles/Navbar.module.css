@@ -39,7 +39,15 @@
 .links a:hover {
   text-decoration: underline;
 }
-.bars {
+/* hamburget menu */
+
+.hamburger {
+  display: none;
+  gap: 3rem;
+}
+
+.bars,
+.MobileCart {
   font-size: 2.3rem;
   display: none;
   cursor: pointer;
@@ -52,7 +60,8 @@
   .hamburger {
     display: flex;
   }
-  .bars {
+  .bars,
+  .MobileCart {
     display: flex;
   }
 }
