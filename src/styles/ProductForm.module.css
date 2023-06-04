@@ -100,24 +100,6 @@
   color: #b6002c;
 }
 
-@keyframes slidein {
-  0% {
-    top: -100%;
-  }
-
-  40% {
-    top: 90px;
-  }
-
-  60% {
-    top: 90px;
-  }
-
-  100% {
-    top: -100%;
-  }
-}
-
 @media (max-width: 900px) {
   .form {
     padding: 16rem 2rem 8rem 2rem;

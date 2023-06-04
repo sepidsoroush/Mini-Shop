@@ -22,16 +22,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 50rem;
+  width: 45rem;
   gap: 1rem;
   margin-top: 2rem;
+  padding: 0 2rem;
 }
 .img {
   flex: 1 1;
   flex-shrink: 1;
   display: block;
   border: none;
-  background-color: transparent;
   cursor: pointer;
 }
 .container img {
@@ -48,26 +48,26 @@
   box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
 }
 
-@keyframes slidein {
-  0% {
-    top: -100%;
-  }
-
-  40% {
-    top: 90px;
-  }
-
-  60% {
-    top: 90px;
-  }
-
-  100% {
-    top: -100%;
-  }
-}
-
 @media (max-width: 850px) {
   .album {
     width: 100%;
+  }
+  .container {
+    width: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: auto;
+  }
+}
+@media (max-width: 300px) {
+  .mainImg {
+    height: 200px;
+  }
+  .mainImg img {
+    width: 100%;
+    object-fit: cover;
   }
 }
