@@ -8,14 +8,15 @@
 }
 .rowContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 2.2rem;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
   position: relative;
   padding: 1rem 0.6rem;
+}
+.rowContainer li {
+  width: 21rem;
 }
 .rowContainer a {
   text-decoration: none;

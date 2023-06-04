@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ["latin"] });
 const Trending = (props) => {
   const slideLeft = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 235;
+    slider.scrollLeft = slider.scrollLeft - 232;
   };
 
   const slideRight = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 235;
+    slider.scrollLeft = slider.scrollLeft + 232;
   };
 
   return (
