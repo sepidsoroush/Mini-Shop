@@ -15,7 +15,7 @@ const Product = (props) => {
   return (
     <div className={`${styles.mainContainer} ${inter.className}`}>
       <Categories />
-      <ul className={styles.flexbox}>
+      <ul className={styles.grid}>
         {filteredItems.map((item) => (
           <li key={item.id}>
             <Post {...item} />

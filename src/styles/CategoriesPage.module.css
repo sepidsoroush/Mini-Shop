@@ -2,21 +2,13 @@
   margin-top: 15rem;
   margin-bottom: 10rem;
 }
-.flexbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
+.grid {
+  grid-gap: 2rem;
+  display: grid;
   gap: 2rem;
-  padding-top: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.flexbox a {
+.grid a {
   text-decoration: none;
   color: black;
-}
-@media (max-width: 700px) {
-  .flexbox {
-    justify-content: center;
-  }
 }
