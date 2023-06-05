@@ -10,7 +10,7 @@ const FullCart = (props) => {
 
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles.body}>
         <div className={styles.fullCart}>
           {items.length === 0 ? (
             <EmptyCart onClose={props.onClose} />
@@ -25,13 +25,11 @@ const FullCart = (props) => {
           )}
         </div>
       </div>
-      <div className={styles.subtotal}>
-        <div className={styles.price}>
-          <p>Subtotal</p>
-          <p>{totalAmount + ".00$"}</p>
-        </div>
-        <div className={styles.action}>
-          <Link href="#">Go to Checkout</Link>
+      <div className={styles.footer}>
+        <div className={styles.title}>Subtotal</div>
+        <div className={styles.container}>
+          <span className={styles.price}>{totalAmount + ".00$"}</span>
+          <button className={styles.action}>Go to Checkout</button>
         </div>
       </div>
     </>

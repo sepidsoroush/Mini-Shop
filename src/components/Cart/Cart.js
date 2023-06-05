@@ -30,17 +30,17 @@ const Cart = (props) => {
         }`}
       >
         <div className={styles.header}>
-          <h2 className={styles.title}>Your Shopping Cart ({items.length})</h2>
+          <h2>Your Shopping Cart ({items.length})</h2>
           <FaTimes onClick={closeCartHandler} className={styles.icon}></FaTimes>
         </div>
 
-        <div className={styles.body}>
+        <>
           {items.length < 1 ? (
             <EmptyCart onClose={closeCartHandler} />
           ) : (
             <FullCart onClose={closeCartHandler} />
           )}
-        </div>
+        </>
       </div>
     </>
   );

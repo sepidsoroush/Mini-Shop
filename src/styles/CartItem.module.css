@@ -3,7 +3,7 @@
   border: 1px solid #717171;
   display: grid;
   grid-template-columns: 30fr 50fr 20fr;
-  height: 15rem;
+  /* height: 15rem; */
   width: 100%;
   margin-bottom: 5px;
 }
@@ -35,6 +35,7 @@
   background-color: black;
   color: white;
   cursor: pointer;
+  border: 0;
 }
 
 .btns p {
@@ -71,5 +72,32 @@
   }
   .name {
     font-size: 1.6rem;
+  }
+}
+@media (max-width: 300px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    width: 100%;
+    text-align: center;
+  }
+  .middle {
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 1rem;
+  }
+  .name {
+    margin: 1rem 0;
+  }
+  .info {
+    flex-direction: row;
+    margin: 0 1rem;
+  }
+  .icon {
+    margin-left: 2rem;
   }
 }
