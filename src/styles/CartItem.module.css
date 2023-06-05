@@ -1,7 +1,6 @@
 .item {
   background-color: #f2f2f2;
   border: 1px solid #717171;
-  border-radius: 3px;
   display: grid;
   grid-template-columns: 30fr 50fr 20fr;
   height: 15rem;
@@ -10,20 +9,18 @@
 }
 .image {
   background-color: #fff;
-  height: 100%;
-  width: 100%;
 }
 .image img {
   width: auto;
   height: auto;
   object-fit: cover;
-  /* border-radius: 3px; */
 }
 .middle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
+  margin-left: 12px;
+  padding: 9px 0;
 }
 .name {
   font-size: 2rem;
@@ -54,10 +51,25 @@
   font-weight: 600;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 1.5rem;
+  margin: 0 12px;
+  padding: 9px 0;
   text-align: right;
   font-size: 2rem;
 }
 .icon {
   cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .item {
+    height: 100%;
+  }
+  .info {
+    text-align: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
+  .name {
+    font-size: 1.6rem;
+  }
 }

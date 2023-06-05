@@ -27,7 +27,7 @@
   z-index: 999;
   top: 0;
   right: 0;
-  padding: 3rem 2.5rem 1.5rem 2.5rem;
+  padding: 3rem 2rem;
   background-color: white;
   height: 100vh;
   width: 50rem;
@@ -54,7 +54,6 @@
 }
 .body {
   height: 100vh;
-  padding: 0.5rem;
 }
 
 /*empty cart */
@@ -86,8 +85,7 @@
 /*full cart */
 .main {
   overflow-y: scroll;
-  padding: 5px;
-  height: 70%;
+  height: 75%;
   margin-top: 2rem;
   margin-right: -0.5rem;
 }
@@ -132,4 +130,18 @@
 .action a:hover {
   background-color: #000000;
   color: white;
+}
+
+@media (max-width: 420px) {
+  .cart {
+    width: 40rem;
+  }
+  /* .fullCart {
+    align-items: center;
+  } */
+
+  .subtotal {
+    flex-direction: column;
+    align-items: center;
+  }
 }
