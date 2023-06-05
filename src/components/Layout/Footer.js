@@ -35,7 +35,7 @@ function Footer() {
             rel="noreferrer"
             href="https://github.com/sepidsoroush"
           >
-            SepiDev
+            Sepideh Soroush
           </a>
         </p>
         <p className={styles.copyright}>
