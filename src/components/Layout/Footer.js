@@ -1,20 +1,32 @@
-import styles from '@/styles/Footer.module.css'
-import Link from 'next/link'
-import { Inter } from 'next/font/google'
+import styles from "@/styles/Footer.module.css";
+import Link from "next/link";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 function Footer() {
   return (
     <div className={inter.className}>
       <footer className={styles.footer}>
         <div className={styles.links}>
-          <Link href="#" className={styles.item}>About</Link>
-          <Link href="#" className={styles.item}>Store locator</Link>
-          <Link href="#" className={styles.item}>FAQs</Link>
-          <Link href="#" className={styles.item}>News</Link>
-          <Link href="#" className={styles.item}>Careers</Link>
-          <Link href="#" className={styles.item}>Contact Us</Link>
+          <Link href="/#" className={styles.item}>
+            About
+          </Link>
+          <Link href="/#" className={styles.item}>
+            Store locator
+          </Link>
+          <Link href="/#" className={styles.item}>
+            FAQs
+          </Link>
+          <Link href="/#" className={styles.item}>
+            News
+          </Link>
+          <Link href="/#" className={styles.item}>
+            Careers
+          </Link>
+          <Link href="/#" className={styles.item}>
+            Contact Us
+          </Link>
         </div>
         <p className={styles.copyright}>
           Coded by &nbsp;
