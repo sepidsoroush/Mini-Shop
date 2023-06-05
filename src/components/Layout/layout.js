@@ -9,9 +9,11 @@ export default function Layout({ children }) {
 
   const openCartHandler = () => {
     setShowCart(true);
+    document.body.style.overflow = "hidden";
   };
   const closeCartHandler = () => {
     setShowCart(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
