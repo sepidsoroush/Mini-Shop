@@ -1,38 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## About The Project
+This is a minimalist e-commerce website built with Nextjs and CSS. This website features a modern and intuitive design, with easy-to-use navigation and a simple shopping experience that puts the focus on the products.
 
-First, run the development server:
+👉🏻 [Live Demo](https://e-commerce-kappa-hazel.vercel.app/)
 
+### Built With:
+- [NextJs](https://nextjs.org/)
+- [Vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [firebase](https://firebase.google.com/)
+
+
+### Getting Started
+#### Prerequisites
+To run this project on your local machine make sure you have the latest package manager installed:
+```sh
+  npm install npm@latest -g
+  ```
+#### Installation
+1. clone the repo:
+```sh
+   git clone https://github.com/sepidsoroush/E-commerce
+```
+
+2.  Install NPM packages
+   ```sh
+   npm install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Roadmap
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [x] Fetch data from realtime Database 
+- [x] Make the website responsive
+- [ ] Add checkout process
+- [ ] Add user Authentication
+- [ ] Add a filter to sort products by price.
+- [ ] Multi-language Support
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Acknowledgments
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project made possible because a [GitHub repository](https://github.com/Abderraouf-Rahmani/ecommerce) which I got the idea and data from, and then made it from scratch (both React components and styles). Give it a star :) ⭐️ 
