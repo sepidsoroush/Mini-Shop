@@ -1,10 +1,11 @@
+# 🛒 E-commerce
 
 ## About The Project
-This is a minimalist e-commerce website built with Nextjs and CSS. This website features a modern and intuitive design, with easy-to-use navigation and a simple shopping experience that puts the focus on the products.
+This is a minimalist e-commerce website built with Nextjs and CSS. You can find different products in each category and add them into your shopping cart. 
 
 👉🏻 [Live Demo](https://e-commerce-kappa-hazel.vercel.app/)
 
-### Built With:
+## Built With:
 - [NextJs](https://nextjs.org/)
 - [Vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
@@ -12,41 +13,61 @@ This is a minimalist e-commerce website built with Nextjs and CSS. This website 
 - [firebase](https://firebase.google.com/)
 
 
-### Getting Started
-#### Prerequisites
-To run this project on your local machine make sure you have the latest package manager installed:
-```sh
-  npm install npm@latest -g
-  ```
-#### Installation
-1. clone the repo:
-```sh
-   git clone https://github.com/sepidsoroush/E-commerce
-```
+## Features
+- These application was built using Next.js, React Hooks (useState, useContext,useReducer, useEffects, useCallback), Firebase realltime database, React icons, etc.
+- Custom hook (useHttp) to fetch data from firebase dynamically.
+- Global context for shopping cart
+- Categories component to filter search results based on type (movies, TV series, games)
+- Dynamic Routes with `next-router`
+- Fonts with `@next/font`
+- Icons with [Font Awesome 5](https://fontawesome.com/)
+- Responsive design
 
-2.  Install NPM packages
-   ```sh
-   npm install
-```
 
-3. Run the development server
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Components
+> **Warning**
+> This is work in progress. I'm building this in public.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Roadmap
-
-- [x] Fetch data from realtime Database 
-- [x] Make the website responsive
-- [ ] Add checkout process
-- [ ] Add user Authentication
+- [ ] User Authentication
+- [ ] Checkout process
 - [ ] Add a filter to sort products by price.
 - [ ] Multi-language Support
+- [x] Shopping Cart
+- [x] Notifications
+- [x] Navbar
+- [x] Product detail page
+- [x] Trendings
+- [x] Categories
+- [x] Home page
+
+## 📸 Screenshots of project:
+
+<h3 align='center'>Home Page 🏠</h3>
+
+<div align='center'>
+<img src='https://github.com/sepidsoroush/next-search-movies/assets/105380339/33d4caa4-4ad8-479c-966a-13f4c9a1afcf'/>
+</div>
+<br>
+<br>
+<h3 align='center'>Shopping Cart 🛒</h3>
+
+<div align='center'>
+<img src='https://github.com/sepidsoroush/next-search-movies/assets/105380339/2fad09d4-8219-4057-acdf-12facaeddf45'/>
+</div>
+<br>
+<br>
+<h3 align='center'>Categories Page 🛍️</h3>
+
+<div align='center'>
+<img src='https://github.com/sepidsoroush/next-search-movies/assets/105380339/5bafe663-9879-4bf4-9c68-fb083e9425bf'/>
+</div>
+<br>
+<br>
+<h3 align='center'>Product Page 🎁</h3>
+
+<div align='center'>
+<img src='https://github.com/sepidsoroush/next-search-movies/assets/105380339/d8dc0ff0-427c-409f-9b44-30871c0de9c8'/>
+</div>
 
 
 ## Acknowledgments
