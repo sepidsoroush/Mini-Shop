@@ -14,10 +14,10 @@ This is a minimalist e-commerce website built with Nextjs and CSS. You can find 
 
 
 ## Features
-- These application was built using Next.js, React Hooks (useState, useContext,useReducer, useEffects, useCallback), Firebase realltime database, React icons, etc.
-- Custom hook (useHttp) to fetch data from firebase dynamically.
+- This application was built using Next.js, React Hooks (useState, useContext,useReducer, useEffects, useCallback), Firebase realtime database, React icons, etc.
+- Custom hook (useHttp) to fetch data from Firebase dynamically.
 - Global context for shopping cart
-- Categories component to filter search results based on type (movies, TV series, games)
+- Categories component to filter search results based on type.
 - Dynamic Routes with `next-router`
 - Fonts with `@next/font`
 - Icons with [Font Awesome 5](https://fontawesome.com/)
@@ -26,7 +26,7 @@ This is a minimalist e-commerce website built with Nextjs and CSS. You can find 
 
 ## Components
 > **Warning**
-> This is work in progress. I'm building this in public.
+> This is a work in progress. I'm building this in public.
 
 - [ ] User Authentication
 - [ ] Checkout process
@@ -40,7 +40,7 @@ This is a minimalist e-commerce website built with Nextjs and CSS. You can find 
 - [x] Categories
 - [x] Home page
 
-## 📸 Screenshots of project:
+## 📸 Screenshots of the project:
 
 <h3 align='center'>Home Page 🏠</h3>
 
@@ -72,4 +72,4 @@ This is a minimalist e-commerce website built with Nextjs and CSS. You can find 
 
 ## Acknowledgments
 
-This project made possible because a [GitHub repository](https://github.com/Abderraouf-Rahmani/ecommerce) which I got the idea and data from, and then made it from scratch (both React components and styles). Give it a star :) ⭐️ 
+This project was made possible because of a [GitHub repository](https://github.com/Abderraouf-Rahmani/ecommerce) which I got the idea and data from, and then made it from scratch (both React components and styles). Please give it a star :) ⭐️ 
