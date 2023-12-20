@@ -6,6 +6,7 @@ This is a minimalist e-commerce website built with Nextjs and CSS. You can find 
 👉🏻 [Live Demo](https://e-commerce-kappa-hazel.vercel.app/)
 
 ## Built With:
+- [React](https://react.dev/)
 - [NextJs](https://nextjs.org/)
 - [Vanilla Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
