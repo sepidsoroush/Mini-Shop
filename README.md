@@ -26,13 +26,7 @@ This is a minimalist e-commerce website built with Nextjs and CSS. You can find 
 
 
 ## Components
-> **Warning**
-> This is a work in progress. I'm building this in public.
 
-- [ ] User Authentication
-- [ ] Checkout process
-- [ ] Add a filter to sort products by price.
-- [ ] Multi-language Support
 - [x] Shopping Cart
 - [x] Notifications
 - [x] Navbar
