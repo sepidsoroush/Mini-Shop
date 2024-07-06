@@ -1,4 +1,4 @@
-# 🛒 E-commerce
+# 🛒 MiniShop E-commerce
 
 ## About The Project
 This is a minimalist e-commerce website built with Nextjs and CSS. You can find different products in each category and add them into your shopping cart. 
