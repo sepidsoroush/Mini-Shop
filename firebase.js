@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyABaktiOeXiHjrDVmxBUPircbXW1gpRWaw",
-  authDomain: "e-commerce-bed4b.firebaseapp.com",
-  projectId: "e-commerce-bed4b",
-  storageBucket: "e-commerce-bed4b.appspot.com",
-  messagingSenderId: "1079748920329",
-  appId: "1:1079748920329:web:27df32bc3500717ae0a4d8"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGE_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
