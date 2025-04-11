@@ -11,8 +11,8 @@ const ProductImgAlbum = (props) => {
     setImage(props.mainImg);
   }, [props.mainImg]);
 
-  const changeImage = (e) => {
-    setImage(e.target.src);
+  const changeImage = (src) => {
+    setImage(src);
   };
 
   return (
@@ -20,7 +20,7 @@ const ProductImgAlbum = (props) => {
       <div className={styles.mainImg}>
         <Image
           src={image || url}
-          alt="product"
+          alt="Main img"
           width={435}
           height={435}
           priority
@@ -30,11 +30,11 @@ const ProductImgAlbum = (props) => {
         <div className={styles.img}>
           {props.mainImg && (
             <Image
-              onMouseOver={changeImage}
+              onMouseOver={() => changeImage(props.mainImg)}
               width={435}
               height={435}
               src={props.mainImg}
-              alt="product"
+              alt="image product 1"
               priority
             />
           )}
@@ -42,11 +42,11 @@ const ProductImgAlbum = (props) => {
         <div className={styles.img}>
           {props.otherImgs && props.otherImgs[0] && (
             <Image
-              onMouseOver={changeImage}
+              onMouseOver={() => changeImage(props.otherImgs[0])}
               width={435}
               height={435}
               src={props.otherImgs[0]}
-              alt="product"
+              alt="image product 2"
               priority
             />
           )}
@@ -54,11 +54,11 @@ const ProductImgAlbum = (props) => {
         <div className={styles.img}>
           {props.otherImgs && props.otherImgs[1] && (
             <Image
-              onMouseOver={changeImage}
+              onMouseOver={() => changeImage(props.otherImgs[1])}
               width={435}
               height={435}
               src={props.otherImgs[1]}
-              alt="product"
+              alt="image product 3"
               priority
             />
           )}

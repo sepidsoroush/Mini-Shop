@@ -6,7 +6,7 @@ const nextConfig = {
       "firebasestorage.googleapis.com",
       "console.firebase.google.com",
       "upload.wikimedia.org",
-      "localhost",
+      "ecommerce-sepidev.vercel.app/",
     ],
   },
 };
