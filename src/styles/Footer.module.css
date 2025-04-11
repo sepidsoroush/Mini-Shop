@@ -25,12 +25,15 @@
 }
 .copyright {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 10px;
+}
+.copyright a {
+  color: lightgray;
 }
 .copyright a:visited {
   text-decoration: none;
-  color: white;
+  color: lightgray;
 }
 /* mobile */
 @media (max-width: 420px) {
